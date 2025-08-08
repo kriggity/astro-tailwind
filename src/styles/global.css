@@ -11,12 +11,47 @@
     --text-6xl: 4rem;
     --text-5xl: 2.5rem;
     --leading-tight: 1.2;
+
+    --color-indigo-900: #1f3e55;
+    --color-indigo-800: #355166;
+    --color-indigo-700: #4c6577;
+    --color-indigo-600: #627888;
+    --color-indigo-500: #798b99;
+    --color-indigo-400: #8f9faa;
+    --color-indigo-300: #a5b2bb;
+    --color-indigo-200: #bcc5cc;
+    --color-indigo-100: #d2d8dd;
+    --color-indigo-50: #f4f5f7;
 }
 @layer components {
     .typography {
-        p {
+        h1,
+        h2,
+        h3,
+        h4,
+        p,
+        li {
+            color: var(--color-indigo-900);
+        }
+        p,
+        li {
             font-size: var(--text-base);
             line-height: var(--leading-normal);
+            max-width: 60ch;
+        }
+        p:not(:last-child),
+        p:not(:only-child) {
+            margin-bottom: 1rem;
+        }
+        ul,
+        ol {
+            &.formatted {
+                list-style-type: disc;
+                li {
+                    margin-bottom: 1rem;
+                    margin-left: 2rem;
+                }
+            }
         }
         h1,
         h2 {
@@ -24,22 +59,30 @@
             font-weight: var(--font-weight-normal);
         }
         h1,
-        h2.h3,
+        h2,
+        h3,
         h4 {
             line-height: var(--leading-tight);
+            margin-bottom: 1rem;
         }
         h1 {
-            font-size: var(--text-6xl);
+            font-size: var(--text-5xl);
+            @media (width >= 40rem) {
+                font-size: var(--text-6xl);
+            }
         }
         h2 {
-            font-size: var(--text-5xl);
+            font-size: var(--text-3xl);
+            @media (width >= 40rem) {
+                font-size: var(--text-5xl);
+            }
         }
         h3 {
             font-size: var(--text-xl);
             font-weight: var(--font-weight-medium);
         }
         h4 {
-            font-weight: var(--font-weight-medium);
+            font-weight: var(--font-weight-semibold);
         }
     }
 }
