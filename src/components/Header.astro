@@ -1,6 +1,6 @@
 <header class="bg-indigo-900">
   <div class="container mx-auto px-4 flex flex-row justify-between text-white">
-    <div>Logo</div>
+    <div class="my-auto"><a href="/">Logo</a></div>
     <nav>
       <ul class="flex flex-row gap-[1px]">
         <li><a href="">About</a></li>
@@ -11,3 +11,16 @@
     </nav>
   </div>
 </header>
+<style>
+  a {
+    display: block;
+    padding: calc(var(--spacing) * 3) calc(var(--spacing) * 4);
+    border-bottom:1px solid transparent;
+    &:hover, &:focus {
+      border-bottom: 1px solid var(--color-white);
+    }
+    &, &:hover, &:focus {
+      transition:all .3s;
+    }
+  }
+</style>
