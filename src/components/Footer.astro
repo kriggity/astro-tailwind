@@ -1,6 +1,11 @@
 <footer class="mt-auto bg-indigo-900 text-white">
   <div class="container mx-auto px-4 flex flex-row justify-center align-middle gap-8">
-    <div class="my-auto">&copy; 1998-2025</div>
+    <div class="my-auto">&copy; 1998-<span id="currentYear"></span></div>
     <div><a href="/privacy-policy" class="py-3 px-6 inline-block hover:underline hover:transition-all hover:ease-in-out">Privacy Policy</a></div>
   </div>
 </footer>
+
+<script>
+  let date = new Date().getFullYear();
+  document.getElementById("currentYear").textContent = date;
+</script>
