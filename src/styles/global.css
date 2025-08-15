@@ -39,17 +39,22 @@
             line-height: var(--leading-normal);
             max-width: 60ch;
         }
-        p:not(:last-child),
+        /* p:not(:last-child),
         p:not(:only-child) {
             margin-bottom: 1rem;
+        } */
+        p:not(:first-child) {
+            margin-block: 1rem;
         }
         ul,
         ol {
             &.formatted {
                 list-style-type: disc;
                 li {
-                    margin-bottom: 1rem;
                     margin-left: 2rem;
+                    &:not(:first-child) {
+                        margin-block: 1rem;
+                    }
                 }
             }
         }
