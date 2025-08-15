@@ -89,5 +89,11 @@
         h4 {
             font-weight: var(--font-weight-semibold);
         }
+        a {
+            text-decoration: underline;
+        }
+        abbr {
+            text-decoration: none;
+        }
     }
 }

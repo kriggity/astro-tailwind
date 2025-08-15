@@ -6,19 +6,26 @@ import Hero from "../components/Hero.astro";
 <Page>
   <Hero />
   <main>
-    <section class="py-16 lg:py-24">
-      <div class="container mx-auto px-4 typography">
-        <h2>Section Title</h2>
-        <h3>Section Title</h3>
-        <h4>Section Title</h4>
+    <section class="py-16 lg:py-24 flex flex-col flex-nowrap gap-20">
+      <div class="w-full max-w-5xl mx-auto px-4 flex flex-row flex-nowrap gap-8 typography">
+        <h2 class="flex-none my-0">My Background</h2>
+        <div class="flex-1 bg-indigo-50"></div>
+      </div>
+      <div class="max-w-2xl mx-auto px-4 typography">
         <div>
-          <p>Vitae magna lacus aliquet quae nimis morbi. Nonummy regula tortor ligula pulvinar consectetuer iaceo felis feugiat. Per dolore ventosus zelus abbas valde. Bis at a lacus ornare dolor jus. Indoles iaceo tortor proprius ornare proin duis quae. Veniam quam felis vulputate decet ludus sagittis.</p>
+          <p>With 26<abbr title="Plus">+</abbr> years of experience in the design and internet realms, I treat every project as a unique problem solving opportunity.</p>
+          <p>I graduated in 2002 with a Digital Design degree from the <a href="https://uc.edu" target="_blank">University of Cincinnati's</a> <a href="https://daap.uc.edu/" target="_blank">School of <abbr title="Design, Architecture, Art, and Planning">D.A.A.P</abbr></a>. Since then I have been honing my skills in front-end web design, print, web accessibility, and marketing.</p>
+          <p>While I consider these areas of web and design my wheelhouse, I have also worked lightly in hosting, databases, back-end development, and deployment pipelines.</p>
+          <p>When I'm not designing or coding, I like to balance my screen time with cooking, DIY projects, and reading.</p>
+          <p>Whether it be in work or everyday life, I believe in honesty, working to the best of my ability, asking for help when I need it, and not being afraid to fail.</p>
         </div>
       </div>
     </section>
     <section class="py-16 lg:py-24 bg-indigo-50">
-      <div class="container mx-auto px-4 typography">
+      <div class="max-w-2xl mx-auto px-4 typography">
         <h2 class="text-indi">Section Title</h2>
+        <h3>Section Title</h3>
+        <h4>Section Title</h4>
         <div>
           <ul class="formatted">
             <li>Vitae magna lacus aliquet quae nimis morbi.</li>
@@ -30,7 +37,7 @@ import Hero from "../components/Hero.astro";
       </div>
     </section>
     <section class="py-16 lg:py-24">
-      <div class="container mx-auto px-4 typography">
+      <div class="max-w-2xl mx-auto px-4 typography">
         <h2>Section Title</h2>
         <div>
           <p>Vitae magna lacus aliquet quae nimis morbi. Nonummy regula tortor ligula pulvinar consectetuer iaceo felis feugiat. Per dolore ventosus zelus abbas valde.</p>
