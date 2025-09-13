@@ -1,16 +1,14 @@
 ---
 import Page from "../layouts/Page.astro";
 import Hero from "../components/Hero.astro";
+import SectionHead from "../components/SectionHead.astro";
 ---
 
 <Page>
   <Hero />
   <main>
     <section class="py-16 lg:py-24 flex flex-col flex-nowrap gap-20">
-      <div class="container mx-auto px-4 flex flex-row flex-nowrap gap-8 typography">
-        <h2 class="flex-none my-0">My Background</h2>
-        <div class="flex-1 bg-indigo-50"></div>
-      </div>
+      <SectionHead title="My Background" />
       <div class="max-w-2xl mx-auto px-4 typography">
         <div>
           <p>With 26<abbr title="Plus">+</abbr> years of experience in the design and internet realms, I treat every project as a unique problem solving opportunity.</p>

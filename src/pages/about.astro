@@ -1,0 +1,20 @@
+---
+import Page from "../layouts/Page.astro";
+import Hero from "../components/Hero.astro";
+import SectionHead from "../components/SectionHead.astro";
+const title = "About Me";
+---
+
+<Page title={title}>
+  <Hero title={title} />
+  <main>
+    <main>
+      <section class="py-16 lg:py-24 flex flex-col flex-nowrap gap-20">
+        <SectionHead title="Sub Headline" />
+        <div class="w-full max-w-2xl mx-auto px-4 typography">
+          <p>Lorem ipsum dolorem.</p>
+        </div>
+      </section>
+    </main>
+  </main>
+</Page>
