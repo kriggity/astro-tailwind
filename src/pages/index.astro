@@ -1,23 +1,27 @@
 ---
 import Page from "../layouts/Page.astro";
-import Hero from "../components/Hero.astro";
 import SectionHead from "../components/SectionHead.astro";
+import { Image } from "astro:assets";
+import thumbsUp from "../assets/images/thumbs up 05b.png";
+const title = "Chris Kraft, Interaction Designer and Accessibility Advocate";
 ---
 
 <Page>
-  <Hero />
   <main>
-    <section class="py-16 lg:py-24 flex flex-col flex-nowrap gap-20">
-      <SectionHead title="My Background" />
-      <div class="max-w-2xl mx-auto px-4 typography">
-        <div>
-          <p>With 26<abbr title="Plus">+</abbr> years of experience in the design and internet realms, I treat every project as a unique problem solving opportunity.</p>
-          <p>I graduated in 2002 with a Digital Design degree from the <a href="https://uc.edu" target="_blank">University of Cincinnati's</a> <a href="https://daap.uc.edu/" target="_blank">School of <abbr title="Design, Architecture, Art, and Planning">D.A.A.P</abbr></a>. Since then I have been honing my skills in front-end web design, print, web accessibility, and marketing.</p>
-          <p>While I consider these areas of web and design my wheelhouse, I have also worked lightly in hosting, databases, back-end development, and deployment pipelines.</p>
-          <p>When I'm not designing or coding, I like to balance my screen time with cooking, DIY projects, and reading.</p>
-          <p>Whether it be in work or everyday life, I believe in honesty, working to the best of my ability, asking for help when I need it, and not being afraid to fail.</p>
+    <section class="flex flex-col items-center px-4 py-16">
+      <div class="flex flex-col lg:flex-row max-w-6xl gap-8 lg:gap-0">
+        <div class="flex flex-col gap-8 w-full max-w-lg h-fit self-center">
+          <h1 class="sr-only">The personal website of Chris Kraft, interaction designer and accessibility advocate.</h1>
+          <div class="text-[5rem] text-indigo-900 font-serif font-extralight leading-[100%]">Hi, I'm <span class="font-normal">Chris</span></div>
+          <div class="text-indigo-900 text-xl font-light leading-[150%]">I've been designing and building in the digital, internet, and print realms for over 26 years.</div>
+        </div>
+        <div class="ml-[-80px]">
+          <Image src={thumbsUp} alt="Krig Thumbs Up" class="w-full max-w-2xl" />
         </div>
       </div>
+    </section>
+    <section class="py-16 lg:py-24 flex flex-col flex-nowrap gap-20">
+      <SectionHead title="Highlighted Projects" />
     </section>
     <section class="py-16 lg:py-24 bg-indigo-50">
       <div class="max-w-2xl mx-auto px-4 typography">
