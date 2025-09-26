@@ -1,0 +1,19 @@
+---
+import { Image } from "astro:assets";
+
+const { title = "Headline", imgSRC, imgALT = "", slug } = Astro.props;
+---
+
+<div class="flex flex-col lg:flex-row gap-8 lg:gap-[108px] lg:max-w-4xl mx-auto">
+  <div class="flex flex-col align-middle self-center">
+    <Image src={imgSRC} alt={imgALT} />
+  </div>
+  <div class="typography flex flex-col">
+    <h3>{title}</h3>
+    <hr class="max-w-24 text-indigo-900 mb-4" />
+    <div>
+      <slot />
+    </div>
+    <a href={slug} class="px-6 py-3 border-1 border-indigo-900 no-underline text-indigo-900 w-fit">View more details about the {title} project</a>
+  </div>
+</div>
