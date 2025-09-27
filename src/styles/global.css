@@ -79,7 +79,7 @@
             }
         }
         h2 {
-            font-size: var(--text-3xl);
+            font-size: 2rem;
             @media (width >= 40rem) {
                 font-size: var(--text-5xl);
             }

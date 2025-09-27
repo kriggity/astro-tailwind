@@ -3,6 +3,7 @@ import Page from "../layouts/Page.astro";
 import SectionHead from "../components/SectionHead.astro";
 import { Image } from "astro:assets";
 import ProjectSection from "../components/ProjectSection.astro";
+import Organizations from "../components/Organizations.astro";
 import thumbsUp from "../assets/images/thumbs up 05b.png";
 import UNJSPF from "../assets/images/UNJSPF.jpg";
 const title = "Chris Kraft, Interaction Designer and Accessibility Advocate";
@@ -22,7 +23,7 @@ const title = "Chris Kraft, Interaction Designer and Accessibility Advocate";
         </div>
       </div>
     </section>
-    <section class="w-full max-w-6xl mx-auto py-16 lg:py-24 px-4 flex flex-col flex-nowrap gap-20">
+    <section class="w-full max-w-6xl mx-auto py-16 lg:py-24 px-4 flex flex-col flex-nowrap gap-10 md:gap-20">
       <SectionHead title="Highlighted Projects" />
       <div class="flex flex-col gap-20">
         <ProjectSection slug="/projects/unjspf" imgSRC={UNJSPF} imgALT="UNJSPF Alt Tag" title="United Nations Joint Staff Pension Fund">
@@ -32,14 +33,14 @@ const title = "Chris Kraft, Interaction Designer and Accessibility Advocate";
           <p>Implemented new content structure, page layouts, and functional templates based on tested designs.</p>
           <p>Delivered improved admin tools to empower staff with easier content management.</p>
         </ProjectSection>
-        <hr />
+        <hr class="text-indigo-200" />
         <ProjectSection slug="/projects/rrs" imgSRC={UNJSPF} imgALT="RRS Image Alt Tag" title="Redi-Rock Structures of OKI">
           <p>Led the full redesign of Redi-Rock Structures of OKI's website to improve sales support.</p>
           <p>Collaborated on branding, UI/UX, and content strategy.</p>
           <p>Helped define a refreshed brand identity and improve site organization and usability.</p>
           <p>Participated in every phase from kickoff to launch, plus training and ongoing support.</p>
         </ProjectSection>
-        <hr />
+        <hr class="text-indigo-200" />
         <ProjectSection slug="/projects/dt-values" imgSRC={UNJSPF} imgALT="DeveloperTown Values Alt Tag" title="DeveloperTown Values">
           <p>Collaborated with UI/UX designers on site structure, content organization, and responsive design.</p>
           <p>Ensured the interface met web accessibility standards.</p>
@@ -49,20 +50,9 @@ const title = "Chris Kraft, Interaction Designer and Accessibility Advocate";
         </ProjectSection>
       </div>
     </section>
-    <section class="w-full max-w-6xl mx-auto py-16 lg:py-24 px-4 flex flex-col flex-nowrap gap-20">
+    <section class="w-full max-w-6xl mx-auto py-16 lg:py-24 px-4 flex flex-col flex-nowrap gap-10 md:gap-20">
       <SectionHead title="Organizations I've Worked With" />
-      <div>
-        <ul class="grid auto-cols-auto">
-          <li><img src="https://placehold.co/100" alt="Placeholder"></li>
-          <li><img src="https://placehold.co/100" alt="Placeholder"></li>
-          <li><img src="https://placehold.co/100" alt="Placeholder"></li>
-          <li><img src="https://placehold.co/100" alt="Placeholder"></li>
-          <li><img src="https://placehold.co/100" alt="Placeholder"></li>
-          <li><img src="https://placehold.co/100" alt="Placeholder"></li>
-          <li><img src="https://placehold.co/100" alt="Placeholder"></li>
-          <li><img src="https://placehold.co/100" alt="Placeholder"></li>
-        </ul>
-      </div>
+      <Organizations />
     </section>
   </main>
 </Page>
