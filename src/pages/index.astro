@@ -1,5 +1,6 @@
 ---
 import Page from "../layouts/Page.astro";
+import Section from "../components/Section.astro";
 import SectionHead from "../components/SectionHead.astro";
 import { Image } from "astro:assets";
 import ProjectSection from "../components/ProjectSection.astro";
@@ -23,7 +24,7 @@ const title = "Chris Kraft, Interaction Designer and Accessibility Advocate";
         </div>
       </div>
     </section>
-    <section class="w-full max-w-6xl mx-auto py-16 lg:py-24 px-4 flex flex-col flex-nowrap gap-10 md:gap-20">
+    <Section>
       <SectionHead title="Highlighted Projects" />
       <div class="flex flex-col gap-20">
         <ProjectSection slug="/projects/unjspf" imgSRC={UNJSPF} imgALT="UNJSPF Alt Tag" title="United Nations Joint Staff Pension Fund">
@@ -49,11 +50,11 @@ const title = "Chris Kraft, Interaction Designer and Accessibility Advocate";
           <p>Helped refine copywriting in coordination with designers and stakeholders.</p>
         </ProjectSection>
       </div>
-    </section>
-    <section class="w-full max-w-6xl mx-auto py-16 lg:py-24 px-4 flex flex-col flex-nowrap gap-10 md:gap-20">
+    </Section>
+    <Section>
       <SectionHead title="Organizations I've Worked With" />
       <Organizations />
-    </section>
+    </Section>
   </main>
 </Page>
 <style>
