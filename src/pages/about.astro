@@ -4,6 +4,7 @@ import Hero from "../components/Hero.astro";
 import Section from "../components/Section.astro";
 import SectionHead from "../components/SectionHead.astro";
 import SectionSub from "../components/SectionSub.astro";
+import SectionSub2Col from "../components/SectionSub2Col.astro";
 import Organizations from "../components/Organizations.astro";
 const title = "About Me";
 ---
@@ -27,42 +28,30 @@ const title = "About Me";
       <SectionHead title="My Approach" />
       <SectionSub>
         <div class="flex flex-col gap-10 md:gap-20">
-          <div class="flex flex-col md:flex-row md:gap-4">
-            <div class="w-full max-w-3xs">
-              <h3>Ask Questions</h3>
-            </div>
-            <div class="w-full">
-              <p>I ask a lot of up-front questions to determine what problems need to be solved. These answers inform how best to proceed with any project. Gathering as much knowledge up front helps prevent rework later in a project.</p>
-            </div>
-          </div>
+          <SectionSub2Col>
+            <h3 slot="title">Ask Questions</h3>
+            <p>I ask a lot of up-front questions to determine what problems need to be solved. These answers inform how best to proceed with any project. Gathering as much knowledge up front helps prevent rework later in a project.</p>
+          </SectionSub2Col>
           <hr class="text-indigo-300" />
-          <div class="flex flex-col md:flex-row md:gap-4">
-            <div class="w-full max-w-3xs">
-              <h3>Plan the Best Approach</h3>
-            </div>
-            <div class="w-full">
-              <p>“Content precedes design. Design in the absence of content is not design, it's decoration.”<br /> ―Jeffrey Zeldman</p>
-              <p>Content-first design enables me to:</p>
-              <ul class="formatted">
-                <li>Design layouts that scale as the site content grows</li>
-                <li>Build reusable components</li>
-                <li>Prevent redesigning flows and screens later in the project timeline</li>
-              </ul>
-            </div>
-          </div>
+          <SectionSub2Col>
+            <h3 slot="title">Plan the Best Approach</h3>
+            <p>&quot;Content precedes design. Design in the absence of content is not design, it's decoration.&quot;<br /> ―Jeffrey Zeldman</p>
+            <p>Content-first design enables me to:</p>
+            <ul class="formatted">
+              <li>Design layouts that scale as the site content grows</li>
+              <li>Build reusable components</li>
+              <li>Prevent redesigning flows and screens later in the project timeline</li>
+            </ul>
+          </SectionSub2Col>
           <hr class="text-indigo-300" />
-          <div class="flex flex-col md:flex-row md:gap-4">
-            <div class="w-full max-w-3xs">
-              <h3>Build for Usability & Accessibility</h3>
-            </div>
-            <div class="w-full">
-              <ul class="formatted">
-                <li>Create a site that is responsive across all devices and optimized for search engines</li>
-                <li>Tailor <abbr title="Content Management System">CMS</abbr> admins to suit the needs of the client</li>
-                <li>Employ best <abbr title="User Experience">UX</abbr> and accessibility practices to be inclusive of all visitors</li>
-              </ul>
-            </div>
-          </div>
+          <SectionSub2Col>
+            <h3 slot="title">Build for Usability & Accessibility</h3>
+            <ul class="formatted">
+              <li>Create a site that is responsive across all devices and optimized for search engines</li>
+              <li>Tailor <abbr title="Content Management System">CMS</abbr> admins to suit the needs of the client</li>
+              <li>Employ best <abbr title="User Experience">UX</abbr> and accessibility practices to be inclusive of all visitors</li>
+            </ul>
+          </SectionSub2Col>
         </div>
       </SectionSub>
     </Section>
@@ -119,10 +108,10 @@ const title = "About Me";
           </div>
         </div>
       </SectionSub>
-      <Section>
-        <SectionHead title="Organizations I've Worked With" />
-        <Organizations />
-      </Section>
+    </Section>
+    <Section>
+      <SectionHead title="Organizations I've Worked With" />
+      <Organizations />
     </Section>
   </main>
 </Page>

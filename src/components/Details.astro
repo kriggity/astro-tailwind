@@ -1,0 +1,29 @@
+---
+import SectionSub2Col from "./SectionSub2Col.astro";
+const { name = "accordion" } = Astro.props;
+---
+
+<details name={name} class="py-8 px-0 md:p-8 border-b first:border-t border-y-indigo-400 flex flex-col open:gap-8 open:bg-indigo-50 hover:bg-indigo-50 focus:bg-indigo-50">
+  <summary class="hover:cursor-pointer">
+    <div class="flex flex-row align-middle place-content-between">
+      <slot name="summaryTitle" />
+      <svg aria-hidden="true" class="svg-icon iconArrowDown ml-2" width="18" height="18" viewBox="0 0 18 18">
+        <path d="M1 6h16l-8 8z" class="fill-indigo-700"/>
+        </svg>
+    </div>
+  </summary>
+  <slot />
+</details>
+
+<style>
+  summary {
+    &::marker {
+      content: "";
+    }
+  }
+  details[open] {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+</style>
