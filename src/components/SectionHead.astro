@@ -4,5 +4,23 @@ const { title = "Headline" } = Astro.props;
 
 <div class="flex flex-row flex-nowrap gap-8 typography">
   <h2 class="my-0">{title}</h2>
-  <div class="hidden sm:block sm:flex-1 bg-indigo-50"></div>
+  <div class="hidden sm:block sm:flex-1 polka"></div>
 </div>
+<style>
+  .polka {
+    --base: 4px;
+    --position: var(--base);
+    --size: calc(var(--base) * 2);
+    --offset: -1px;
+
+    background-image: radial-gradient(var(--color-indigo-500) 10%, transparent 15%), radial-gradient(var(--color-indigo-500) 10%, transparent 15%);
+
+    background-position:
+      var(--offset) var(--offset),
+      calc(var(--base) + var(--offset)) calc(var(--base) + var(--offset));
+
+    background-size: var(--size) var(--size);
+
+    background-color: transparent;
+  }
+</style>
