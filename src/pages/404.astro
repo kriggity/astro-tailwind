@@ -1,10 +1,11 @@
 ---
+import Section from "../components/Section.astro";
 import Page from "../layouts/Page.astro";
 const title = "Page Not Found";
 ---
 
 <Page title={title}>
-    <main>
-        <h1>{title}</h1>
-    </main>
+  <Section>
+    <p>404 content</p>
+  </Section>
 </Page>

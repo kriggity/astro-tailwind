@@ -1,6 +1,7 @@
 ---
 import Base from "../layouts/Base.astro";
 import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
 import Footer from "../components/Footer.astro";
 
 const { title } = Astro.props;
@@ -8,6 +9,9 @@ const { title } = Astro.props;
 
 <Base title={title}>
   <Header />
-  <slot/>
+  <main class="flex flex-col flex-nowrap gap-16 lg:gap-32 pb-16 lg:pb-32">
+    <Hero title={title} />
+    <slot />
+  </main>
   <Footer />
 </Base>
