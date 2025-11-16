@@ -1,10 +1,19 @@
 ---
 import { Image } from "astro:assets";
 
-const { title = "Headline", imgSRC, imgALT = "" } = Astro.props;
+const { title = "Headline", imgSRC, imgALT = "", reverse } = Astro.props;
 ---
 
-<div class="flex flex-col lg:flex-row gap-8 lg:gap-[108px] lg:max-w-4xl mx-auto">
+<div
+  class:list={[
+    "flex flex-col gap-8 lg:gap-[108px] lg:max-w-4xl mx-auto",
+    {
+      "lg:flex-row-reverse": reverse,
+    },
+    {
+      "lg:flex-row": !reverse,
+    },
+  ]}>
   <div class="flex flex-col align-middle self-center">
     <Image src={imgSRC} alt={imgALT} />
   </div>

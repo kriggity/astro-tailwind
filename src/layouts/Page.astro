@@ -4,13 +4,13 @@ import Header from "../components/Header.astro";
 import Hero from "../components/Hero.astro";
 import Footer from "../components/Footer.astro";
 
-const { title } = Astro.props;
+const { title, subtitle } = Astro.props;
 ---
 
 <Base title={title}>
   <Header />
   <main class="flex flex-col flex-nowrap gap-16 lg:gap-32 pb-16 lg:pb-32">
-    <Hero title={title} />
+    <Hero title={title} subtitle={subtitle} />
     <slot />
   </main>
   <Footer />

@@ -7,9 +7,10 @@ import ProjectSection from "../components/ProjectSection.astro";
 import UNJSPF from "../assets/images/UNJSPF.jpg";
 
 const title = "Projects";
+const subtitle = "Recent and noteworthy web projects demonstrating my range and acumen.";
 ---
 
-<Page title={title}>
+<Page title={title} subtitle={subtitle}>
   <Section>
     <SectionHead title="Highlighted Work" />
     <HighlightedWork />
@@ -25,7 +26,7 @@ const title = "Projects";
         <p>Delivered improved admin tools to empower staff with easier content management.</p>
       </ProjectSection>
       <hr class="text-indigo-200" />
-      <ProjectSection slug="/projects/rrs" imgSRC={UNJSPF} imgALT="RRS Image Alt Tag" title="Redi-Rock Structures of OKI">
+      <ProjectSection slug="/projects/rrs" imgSRC={UNJSPF} imgALT="RRS Image Alt Tag" title="Redi-Rock Structures of OKI" reverse="true">
         <p>Led the full redesign of Redi-Rock Structures of OKI's website to improve sales support.</p>
         <p>Collaborated on branding, UI/UX, and content strategy.</p>
         <p>Helped define a refreshed brand identity and improve site organization and usability.</p>
