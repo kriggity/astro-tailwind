@@ -8,18 +8,20 @@ import thumbsUp from "@images/thumbs up 05b.png";
 import Base from "@layouts/Base.astro";
 import Footer from "@components/Footer.astro";
 import Header from "@components/Header.astro";
+import LinkButton from "@components/LinkButton.astro";
 const title = "Chris Kraft, Interaction Designer and Accessibility Advocate";
 ---
 
 <Base title={title}>
   <Header />
-  <main class="flex flex-col flex-nowrap gap-16 lg:gap-32 pb-16 lg:pb-32">
+  <main class="flex flex-col flex-nowrap gap-16 lg:gap-32 pb-16 lg:pb-32" id="main">
     <section class="flex flex-col items-center px-4 py-16">
       <div class="flex flex-col sm:flex-row max-w-6xl gap-4 sm:gap-8 lg:gap-0">
         <div class="flex flex-col gap-8 w-full max-w-lg h-fit self-center">
           <h1 class="sr-only">The personal website of Chris Kraft, interaction designer and accessibility advocate.</h1>
           <div class="greeting-text text-indigo-900 font-serif font-extralight leading-[100%]">Hi, I'm <span class="font-normal">Chris</span></div>
           <div class="text-indigo-900 text-xl font-light leading-[150%]">I've been designing and building in the digital, internet, and print realms for over 26 years.</div>
+          <LinkButton slug="/about" slot="LinkButton">Learn More About Me</LinkButton>
         </div>
         <div class="ml-0 sm:-ml-16 lg:-ml-40">
           <Image src={thumbsUp} alt="Krig Thumbs Up" class="w-full max-w-2xl" />
