@@ -12,7 +12,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>("@images/otherwork/*
 
 <Page title={title} subtitle={subtitle}>
   <Section>
-    <div class="columns-1 sm:columns-2 md:columns-4 gap-4 space-y-4">
+    <div class="flex flex-col gap-8 items-center sm:gap-16 sm:flex-row sm:flex-wrap sm:justify-around">
       {
         Object.entries(images).map(async ([_path, image], index) => {
           const { default: imageData } = await image();
