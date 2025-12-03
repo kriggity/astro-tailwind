@@ -2,26 +2,23 @@
 import Page from "@layouts/Page.astro";
 import Section from "@components/Section.astro";
 
-import ImageGrid from "@components/ImageGrid.astro";
+import Image from "astro/components/Image.astro";
 
 const title = "Other Work";
 const subtitle = "A curated collection of my fine art, illustrations, print work, and anything else I've created over the years.";
 
-// const images = import.meta.glob<{ default: ImageMetadata }>("@assets/images/other-work/*.{jpg,jpeg,png,webp}");
+const images = import.meta.glob<{ default: ImageMetadata }>("@images/otherwork/*.{jpg,jpeg,png,svg,webp}");
 ---
 
 <Page title={title} subtitle={subtitle}>
   <Section>
-    <ImageGrid />
-    <!-- {
-      Object.entries(images).map(async ([_path, image], index) => {
-        const { default: imageData } = await image();
-        return (
-          <p>
-            index: {index}, src: {imageData}
-          </p>
-        );
-      })
-    } -->
+    <div class="columns-1 sm:columns-2 md:columns-4 gap-4 space-y-4">
+      {
+        Object.entries(images).map(async ([_path, image], index) => {
+          const { default: imageData } = await image();
+          return <Image format="webp" src={imageData} alt="" height={400} loading={index < 20 ? "eager" : "lazy"} />;
+        })
+      }
+    </div>
   </Section>
 </Page>
