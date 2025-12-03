@@ -1,0 +1,28 @@
+{
+  "images": [
+    {
+      "src": "@images/otherwork/Bearded-Artist-Logo.png",
+      "alt": "Illustration of man's face with glasses and a beard",
+      "title": "The Bearded Artist Logo",
+      "description": "This was initially created as a placeholder to help me design an early version of the client's website. The client like it enough to use it as his branding."
+    },
+    {
+      "src": "@images/otherwork/Imperial-Cadet.png",
+      "alt": "Illustration of a Star Wars storm trooper aiming a blaster rifle.",
+      "title": "Imperial Cadet",
+      "description": "Custom illustration created to be used as trading stickers and coins."
+    },
+    {
+      "src": "@images/otherwork/Scout-Trooper.jpg",
+      "alt": "Illustration of a Star Wars scout trooper with a speeder bike in the foreground.",
+      "title": "Scout Trooper",
+      "description": "Custom illustration created to be used as trading stickers and coins."
+    }
+    // {
+    //   "src": "@images/otherwork/",
+    //   "alt": "alt tag",
+    //   "title": "Title",
+    //   "description": "Description ipsum dolorem"
+    // }
+  ]
+}

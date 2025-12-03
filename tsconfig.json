@@ -9,7 +9,9 @@
       "@layouts/*": ["src/layouts/*"],
       // "@scripts/*": ["src/scripts/*"],
       "@styles/*": ["src/styles/*"]
-    }
+    },
+    // "strictNullChecks": true, // add if using `base` template
+    "allowJs": true // required, and included with all Astro templates
   },
   "include": [".astro/types.d.ts", "**/*"],
   "exclude": ["dist"]
