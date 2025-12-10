@@ -1,6 +1,5 @@
 ---
 import Page from "@layouts/Page.astro";
-import Hero from "@components/Hero.astro";
 import Section from "@components/Section.astro";
 import SectionHead from "@components/SectionHead.astro";
 import SectionSub from "@components/SectionSub.astro";
@@ -46,19 +45,28 @@ const title = "United Nations Joint Staff Pension Fund";
       </Details>
       <Details>
         <h3 slot="summaryTitle" class="mb-0">Technical Analysis</h3>
-        <SectionSub2Col />
+        <!-- <SectionSub2Col> -->
+        <p>Both UNJSPF websites were built using WordPress, and the goal was to condense them into a single WordPress site. I conducted a technical audit of both WordPress admins to determine what features and plugins:</p>
+        <ul class="formatted">
+          <li>Needed to remain</li>
+          <li>Were not being used and could be removed</li>
+          <li>Could be replaced with newer, better versions</li>
+        </ul>
+        <p>I then conducted interviews with the UNJSPF staff, who maintained the site content, to understand their workflows and pain points. Outdated, custom WordPress tools made updating content difficult and time-consuming. In some instances, the staff needed to submit change requests to separate UN developers — a process that was time-consuming and unpredictable.</p>
+        <p>Using the findings from my technical analysis and interviews, I researched WordPress plugins and workflows that would eliminate frustration, reduce content update time, and remove the dependency on developers for simple content updates.</p>
+        <!-- </SectionSub2Col> -->
       </Details>
       <Details>
         <h3 slot="summaryTitle" class="mb-0">Design Implementation</h3>
-        <SectionSub2Col />
+        <p>Implementing the product designers’ design and architecture improvements was a multifaceted phase of the project. The public-facing side of the site needed to be responsive, accessible, and able to deliver the content in many languages — including those that read right-to-left. For the internal, administrative side of the site, I leveraged the tools and libraries of Oxygen Builder for WordPress. With this builder, I created reusable templates and components to allow the website to scale, while allowing for easy maintenance and content creation and updating.</p>
       </Details>
       <Details>
         <h3 slot="summaryTitle" class="mb-0">Technical Lead</h3>
-        <SectionSub2Col />
+        <p>Using the new templates and components, I lead an international team of UN developers in migrating content from the old sites to the new site, as per the product designers’ improved content architecture. This content migration verified that the templates and tools made scaling the site with new pages and content was extremely quick and easy. I also worked with several senior developers to implement advanced functionality as it related to language switching and contact form routing.</p>
       </Details>
       <Details>
         <h3 slot="summaryTitle" class="mb-0">Documentation and Training</h3>
-        <SectionSub2Col />
+        <p>I created documentation detailing how to update existing content as well as creating new content and how to properly organize it. The ease of training with the UNJSPF staff confirmed that the new tools and workflows were significant improvements. Feedback from the staff after the training was overwhelmingly positive.</p>
       </Details>
     </SectionSub>
   </Section>
