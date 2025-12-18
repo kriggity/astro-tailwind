@@ -5,8 +5,13 @@ import SectionHead from "@components/SectionHead.astro";
 import SectionSub from "@components/SectionSub.astro";
 import SectionSub2Col from "@components/SectionSub2Col.astro";
 import Details from "@components/Details.astro";
+import { Image } from "astro:assets";
 
 const title = "Redi-Rock Structures of O.K.I.";
+import CalendarBeforeAfter from "@images/projects/rrs/RRS Calendar before after - 800.jpg";
+import Logos from "@images/projects/rrs/Logos.png";
+import Photography from "@images/projects/rrs/Photography.png";
+import Workshop from "@images/projects/rrs/RRS Workshop.jpg";
 ---
 
 <Page title={title}>
@@ -26,11 +31,18 @@ const title = "Redi-Rock Structures of O.K.I.";
         <div class="flex flex-col gap-10">
           <SectionSub2Col>
             <h4 slot="title">Workshop</h4>
-            <p>We conducted a branding workshop with the owners and sales directors to help define the company brand and direct design and copywriting.</p>
+            <div class="flex flex-col gap-4">
+              <p>We conducted a branding workshop with the owners and sales directors to help define the company brand and direct design and copywriting.</p>
+              <Image src={Workshop} alt="large post-it notes" />
+            </div>
           </SectionSub2Col>
+          <div></div>
           <SectionSub2Col>
             <h4 slot="title">Logo</h4>
-            <p>Using the branding workshop findings as guidance, I explored new logos and color palettes. We ultimately arrived at a refined version of the existing logo with new brand colors and variations.</p>
+            <div class="flex flex-col gap-4">
+              <p>Using the branding workshop findings as guidance, I explored new logos and color palettes. We ultimately arrived at a refined version of the existing logo with new brand colors and variations.</p>
+              <Image src={Logos} alt="logos" />
+            </div>
           </SectionSub2Col>
           <SectionSub2Col>
             <h4 slot="title">Guidelines</h4>
@@ -38,11 +50,17 @@ const title = "Redi-Rock Structures of O.K.I.";
           </SectionSub2Col>
           <SectionSub2Col>
             <h4 slot="title">Print</h4>
-            <p>Before we tackled the website, I updated the client’s print collateral with the refreshed logo, colors, and typography.</p>
+            <div class="flex flex-col gap-4">
+              <p>Before we tackled the website, I updated the client’s print collateral with the refreshed logo, colors, and typography.</p>
+              <Image src={CalendarBeforeAfter} alt="" />
+            </div>
           </SectionSub2Col>
           <SectionSub2Col>
             <h4 slot="title">Photography</h4>
-            <p>Following the new branding guidelines, we directed a photography session that captured the production facilities, products, examples of product use, and various team members.</p>
+            <div class="flex flex-col gap-4">
+              <p>Following the new branding guidelines, we directed a photography session that captured the production facilities, products, examples of product use, and various team members.</p>
+              <Image src={Photography} alt="" />
+            </div>
           </SectionSub2Col>
         </div>
       </Details>
