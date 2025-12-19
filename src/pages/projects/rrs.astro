@@ -8,9 +8,18 @@ import Details from "@components/Details.astro";
 import { Image } from "astro:assets";
 
 const title = "Redi-Rock Structures of O.K.I.";
+import BrandGuidelines from "@images/projects/rrs/BrandGuidelines.png";
+import BrandGuidelinesPDF from "@assets/Brand Guidelines.pdf";
 import CalendarBeforeAfter from "@images/projects/rrs/RRS Calendar before after - 800.jpg";
+import Development from "@images/projects/rrs/Development.jpg";
+import Documentation from "@images/projects/rrs/Documentation.jpg";
+import HomeBeforeAfter from "@images/projects/rrs/HomeBeforeAfter.png";
+import HomeDesigns from "@images/projects/rrs/HomeDesigns.jpg";
 import Logos from "@images/projects/rrs/Logos.png";
 import Photography from "@images/projects/rrs/Photography.png";
+import Prototype from "@images/projects/rrs/Prototype.png";
+import SiteOutline from "@images/projects/rrs/SiteOutline.png";
+import Template from "@images/projects/rrs/Template.png";
 import Workshop from "@images/projects/rrs/RRS Workshop.jpg";
 ---
 
@@ -36,7 +45,6 @@ import Workshop from "@images/projects/rrs/RRS Workshop.jpg";
               <Image src={Workshop} alt="large post-it notes" />
             </div>
           </SectionSub2Col>
-          <div></div>
           <SectionSub2Col>
             <h4 slot="title">Logo</h4>
             <div class="flex flex-col gap-4">
@@ -46,7 +54,10 @@ import Workshop from "@images/projects/rrs/RRS Workshop.jpg";
           </SectionSub2Col>
           <SectionSub2Col>
             <h4 slot="title">Guidelines</h4>
-            <p>Next, we designed and authored branding guidelines to codify logo usage, typography, colors, written voice, and photography rules.</p>
+            <div class="flex flex-col gap-4">
+              <p>Next, we designed and authored <a href={BrandGuidelinesPDF} target="_blank">branding guidelines</a> to codify logo usage, typography, colors, written voice, and photography rules.</p>
+              <Image src={BrandGuidelines} alt="" />
+            </div>
           </SectionSub2Col>
           <SectionSub2Col>
             <h4 slot="title">Print</h4>
@@ -69,37 +80,57 @@ import Workshop from "@images/projects/rrs/RRS Workshop.jpg";
         <div class="flex flex-col gap-10">
           <SectionSub2Col>
             <h4 slot="title">Site Structure</h4>
-            <p>Drawing from the structure of the Redi-Rock International site, as well as the site visitors identified in the branding workshop, we organized the content to better showcase the products, their environmental uses, and existing projects they were used in.</p>
+            <div class="flex flex-col gap-4">
+              <p>Drawing from the structure of the Redi-Rock International site, as well as the site visitors identified in the branding workshop, we organized the content to better showcase the products, their environmental uses, and existing projects they were used in.</p>
+              <Image src={SiteOutline} alt="" />
+            </div>
           </SectionSub2Col>
           <SectionSub2Col>
             <h4 slot="title">Page Structure</h4>
-            <p>We organized each page template to highlight the most important information the target visitors would be seeking. Additional information related to each product, industry, and project case study was included in the page templates to provide relevant, cross-linked content.</p>
+            <div class="flex flex-col gap-4">
+              <p>We organized each page template to highlight the most important information the target visitors would be seeking. Additional information related to each product, industry, and project case study was included in the page templates to provide relevant, cross-linked content.</p>
+              <Image src={Template} alt="" />
+            </div>
           </SectionSub2Col>
         </div>
       </Details>
       <Details>
         <h3 slot="summaryTitle" class="mb-0">Protyping</h3>
-        <p>Using Figma, I connected the individual wireframe pages together to validate the organization and navigation. It was important at this stage to have the client test drive the prototype and sign off on the organization and layouts before proceeding with the UI design.</p>
+        <div class="flex flex-col gap-4">
+          <p>Using Figma, I connected the individual wireframe pages together to validate the organization and navigation. It was important at this stage to have the client test drive the prototype and sign off on the organization and layouts before proceeding with the UI design.</p>
+          <Image src={Prototype} alt="" />
+        </div>
       </Details>
       <Details>
         <h3 slot="summaryTitle" class="mb-0">UI Design</h3>
-        <p>Continuing in Figma, we presented three unique design options that struck a good balance of delivering product and company information while keeping the consistent visual and written voice established in the branding guidelines. Once the client approved one of the themes, I applied the design to the interior templates and components.</p>
+        <div class="flex flex-col gap-4">
+          <p>Continuing in Figma, we presented several design options that struck a good balance of delivering product and company information while keeping the consistent visual and written voice established in the branding guidelines. Once the client approved one of the themes, I applied the design to the interior templates and components.</p>
+          <Image src={HomeDesigns} alt="" />
+        </div>
       </Details>
       <Details>
         <h3 slot="summaryTitle" class="mb-0">Development</h3>
-        <p>Using the reusable templates and components in Figma laid the groundwork for creating these reusable items in WordPress. Using Oxygen Builder for WordPress, I created a global toolkit of colors, fonts, templates, and reusable components. Not only did this creation of global elements allow for future scaling of the website, it also allowed for rapid creation and content population of the pages from Figma to WordPress.</p>
-        <p>I also created custom tools within the WordPress admin to allow the client to easily add team members, entries to the company timeline, and automatic placement of new products and project case studies based on a predefined metatag structure.</p>
+        <div class="flex flex-col gap-4">
+          <div>
+            <p>Using the reusable templates and components in Figma laid the groundwork for creating these reusable items in WordPress. Using Oxygen Builder for WordPress, I created a global toolkit of colors, fonts, templates, and reusable components. Not only did this creation of global elements allow for future scaling of the website, it also allowed for rapid creation and content population of the pages from Figma to WordPress.</p>
+            <p>I also created custom tools within the WordPress admin to allow the client to easily add team members, entries to the company timeline, and automatic placement of new products and project case studies based on a predefined metatag structure.</p>
+          </div>
+          <Image src={Development} alt="" />
+        </div>
       </Details>
       <Details>
         <h3 slot="summaryTitle" class="mb-0">Documentation and Training</h3>
-        <p>I created technical documentation, within the WordPress admin, which contained instructions on how to create and update key pieces of information in the site. Being able to keep this type of documentation within the site is a nice upgrade from my previous practices of authoring and delivering in a separate environment (e.g. Google Docs) from the functioning site.</p>
+        <div class="flex flex-col gap-4">
+          <p>I created technical documentation, within the WordPress admin, which contained instructions on how to create and update key pieces of information in the site. Being able to keep this type of documentation within the site is a nice upgrade from my previous practices of authoring and delivering in a separate environment (e.g. Google Docs) from the functioning site.</p>
+          <Image src={Documentation} alt="" />
+        </div>
       </Details>
     </SectionSub>
   </Section>
   <Section>
     <SectionHead title="Results" />
     <SectionSub>
-      <p>image comparisons</p>
+      <Image src={HomeBeforeAfter} alt="" />
     </SectionSub>
   </Section>
 </Page>
