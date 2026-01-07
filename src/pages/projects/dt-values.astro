@@ -5,8 +5,13 @@ import SectionHead from "@components/SectionHead.astro";
 import SectionSub from "@components/SectionSub.astro";
 import SectionSub2Col from "@components/SectionSub2Col.astro";
 import Details from "@components/Details.astro";
+import { Image } from "astro:assets";
 
 const title = "DeveloperTown Values";
+import Home from "@images/projects/dtv/home.png";
+import HomeMobile from "@images/projects/dtv/home-mobile.png";
+import TakeOwnerShip from "@images/projects/dtv/takeownership.jpg";
+import TakeOwnerShipMobile from "@images/projects/dtv/takeownership-mobile.png";
 ---
 
 <Page title={title}>
@@ -14,7 +19,7 @@ const title = "DeveloperTown Values";
     <SectionHead title="Summary" />
     <div class="max-w-2xl mx-auto px-4 typography">
       <div class="text-pretty">
-        <p>Created a custom microsite to communicate DeveloperTown’s vision, mission, and values.</p>
+        <p><a href="https://developertown.com/" target="_blank">DeveloperTown</a> wanted to create a custom microsite to display its vision, mission, and values that was visually interesting and more engaging than a subsection of an About Us page. Working with content from our company-wide workshop, I collaborated with UX designers to design, author, and build the site. This was an exercise in creative design and testing a (then) new website tool: <a href="https://astro.build/" target="_blank">Astro</a>.</p>
       </div>
     </div>
   </Section>
@@ -22,66 +27,54 @@ const title = "DeveloperTown Values";
     <SectionHead title="Roles and Timeline" />
     <SectionSub>
       <Details>
-        <h3 slot="summaryTitle" class="mb-0">Branding</h3>
+        <h3 slot="summaryTitle" class="mb-0">Content Creation</h3>
         <div class="flex flex-col gap-10">
           <SectionSub2Col>
-            <h4 slot="title">Workshop</h4>
-            <p>We conducted a branding workshop with the owners and sales directors to help define the company brand and direct design and copywriting.</p>
+            <h4 slot="title">Photography and Video</h4>
+            <p>I assisted with photography and video (including drone capture) sessions.</p>
           </SectionSub2Col>
           <SectionSub2Col>
-            <h4 slot="title">Logo</h4>
-            <p>Using the branding workshop findings as guidance, I explored new logos and color palettes. We ultimately arrived at a refined version of the existing logo with new brand colors and variations.</p>
-          </SectionSub2Col>
-          <SectionSub2Col>
-            <h4 slot="title">Guidelines</h4>
-            <p>Next, we designed and authored branding guidelines to codify logo usage, typography, colors, written voice, and photography rules.</p>
-          </SectionSub2Col>
-          <SectionSub2Col>
-            <h4 slot="title">Print</h4>
-            <p>Before we tackled the website, I updated the client’s print collateral with the refreshed logo, colors, and typography.</p>
-          </SectionSub2Col>
-          <SectionSub2Col>
-            <h4 slot="title">Photography</h4>
-            <p>Following the new branding guidelines, we directed a photography session that captured the production facilities, products, examples of product use, and various team members.</p>
+            <h4 slot="title">Copywriting</h4>
+            <p>I co-authored and refined the written content for the site.</p>
           </SectionSub2Col>
         </div>
       </Details>
       <Details>
         <h3 slot="summaryTitle" class="mb-0">Information Architecture and Content Strategy</h3>
+        <p>I collaborated with the UX designers to organize the site content and arrange the information flow of each page template.</p>
+      </Details>
+      <Details>
+        <h3 slot="summaryTitle" class="mb-0">Design Implementation and Technologies</h3>
         <div class="flex flex-col gap-10">
           <SectionSub2Col>
-            <h4 slot="title">Site Structure</h4>
-            <p>Drawing from the structure of the Redi-Rock International site, as well as the site visitors identified in the branding workshop, we organized the content to better showcase the products, their environmental uses, and existing projects they were used in.</p>
+            <h4 slot="title">Astro</h4>
+            <p>I created the site using the Astro framework and TailwindCSS. Astro allowed me to take advantage of reusable templates and components while building, and then created a fast and lightweight static site for deployment.</p>
           </SectionSub2Col>
           <SectionSub2Col>
-            <h4 slot="title">Page Structure</h4>
-            <p>We organized each page template to highlight the most important information the target visitors would be seeking. Additional information related to each product, industry, and project case study was included in the page templates to provide relevant, cross-linked content.</p>
+            <h4 slot="title">Tailwind</h4>
+            <p>I used <a href="https://tailwindcss.com/" target="_blank">Tailwind</a> as a compliment to Astro. The utility-first approach of Tailwind helped speed up building the base templates and styling. Tailwind's flexibility allowed me to create the customized angles of the UI as the layout changed across many viewport sizes. The optimized CSS output contributed to an overall lean build.</p>
           </SectionSub2Col>
         </div>
-      </Details>
-      <Details>
-        <h3 slot="summaryTitle" class="mb-0">Protyping</h3>
-        <p>Using Figma, I connected the individual wireframe pages together to validate the organization and navigation. It was important at this stage to have the client test drive the prototype and sign off on the organization and layouts before proceeding with the UI design.</p>
-      </Details>
-      <Details>
-        <h3 slot="summaryTitle" class="mb-0">UI Design</h3>
-        <p>Continuing in Figma, we presented three unique design options that struck a good balance of delivering product and company information while keeping the consistent visual and written voice established in the branding guidelines. Once the client approved one of the themes, I applied the design to the interior templates and components.</p>
-      </Details>
-      <Details>
-        <h3 slot="summaryTitle" class="mb-0">Development</h3>
-        <p>Using the reusable templates and components in Figma laid the groundwork for creating these reusable items in WordPress. Using Oxygen Builder for WordPress, I created a global toolkit of colors, fonts, templates, and reusable components. Not only did this creation of global elements allow for future scaling of the website, it also allowed for rapid creation and content population of the pages from Figma to WordPress.</p>
-        <p>I also created custom tools within the WordPress admin to allow the client to easily add team members, entries to the company timeline, and automatic placement of new products and project case studies based on a predefined metatag structure.</p>
-      </Details>
-      <Details>
-        <h3 slot="summaryTitle" class="mb-0">Documentation and Training</h3>
-        <p>I created technical documentation, within the WordPress admin, which contained instructions on how to create and update key pieces of information in the site. Being able to keep this type of documentation within the site is a nice upgrade from my previous practices of authoring and delivering in a separate environment (e.g. Google Docs) from the functioning site.</p>
       </Details>
     </SectionSub>
   </Section>
   <Section>
     <SectionHead title="Results" />
     <SectionSub>
-      <p>image comparisons</p>
+      <div class="grid grid-cols-1 grid-rows-4 sm:grid-cols-2 sm:grid-rows-2 xl:grid-cols-4 xl:grid-rows-1 gap-8">
+        <div>
+          <Image src={Home} alt="" />
+        </div>
+        <div>
+          <Image src={HomeMobile} alt="" />
+        </div>
+        <div>
+          <Image src={TakeOwnerShip} alt="" />
+        </div>
+        <div>
+          <Image src={TakeOwnerShipMobile} alt="" />
+        </div>
+      </div>
     </SectionSub>
   </Section>
 </Page>
