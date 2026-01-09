@@ -15,7 +15,7 @@ const { title = "Headline", imgSRC, imgALT = "", reverse } = Astro.props;
     },
   ]}>
   <div class="flex flex-col align-middle self-center w-full max-w-[640px] lg:max-w-[390px]">
-    <Image src={imgSRC} alt={imgALT} class="aspect-auto overflow-hidden outline outline-indigo-900 outline-offset-2" />
+    <Image src={imgSRC} alt={imgALT} class="aspect-auto overflow-hidden" />
   </div>
   <div class="typography flex flex-col">
     <h3>{title}</h3>
