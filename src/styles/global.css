@@ -73,13 +73,13 @@
             margin-bottom: 1rem;
         }
         h1 {
-            font-size: var(--text-5xl);
+            font-size: 2.25rem;
             @media (width >= 40rem) {
                 font-size: var(--text-6xl);
             }
         }
         h2 {
-            font-size: 2rem;
+            font-size: 1.75rem;
             @media (width >= 40rem) {
                 font-size: var(--text-5xl);
             }
@@ -121,4 +121,22 @@
             max-width: 96rem;
         } */
     }
+}
+.polka {
+    --base: 4px;
+    --position: var(--base);
+    --size: calc(var(--base) * 2);
+    --offset: -1px;
+
+    background-image:
+        radial-gradient(var(--color-indigo-500) 10%, transparent 15%),
+        radial-gradient(var(--color-indigo-500) 10%, transparent 15%);
+
+    background-position:
+        var(--offset) var(--offset),
+        calc(var(--base) + var(--offset)) calc(var(--base) + var(--offset));
+
+    background-size: var(--size) var(--size);
+
+    background-color: transparent;
 }

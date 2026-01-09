@@ -16,7 +16,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>("@images/otherwork/*
       {
         Object.entries(images).map(async ([_path, image], index) => {
           const { default: imageData } = await image();
-          return <Image format="webp" src={imageData} alt="" height={400} loading={index < 20 ? "eager" : "lazy"} />;
+          return <Image format="webp" src={imageData} alt="" height={400} loading={index < 20 ? "eager" : "lazy"} class="outline outline-offset-8 outline-indigo-100" />;
         })
       }
     </div>
