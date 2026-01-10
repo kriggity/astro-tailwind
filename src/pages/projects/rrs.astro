@@ -10,17 +10,26 @@ import { Image } from "astro:assets";
 const title = "Redi-Rock Structures of O.K.I.";
 import BrandGuidelines from "@images/projects/rrs/BrandGuidelines.png";
 import BrandGuidelinesPDF from "@assets/Brand Guidelines.pdf";
-import CalendarBeforeAfter from "@images/projects/rrs/RRS Calendar before after - 800.jpg";
 import Development from "@images/projects/rrs/Development.jpg";
 import Documentation from "@images/projects/rrs/Documentation.jpg";
-import HomeBeforeAfter from "@images/projects/rrs/HomeBeforeAfter.png";
 import HomeDesigns from "@images/projects/rrs/HomeDesigns.jpg";
 import Logos from "@images/projects/rrs/Logos.png";
 import Photography from "@images/projects/rrs/Photography.png";
+import Print2024 from "@images/projects/rrs/Print2024.png";
 import Prototype from "@images/projects/rrs/Prototype.png";
 import SiteOutline from "@images/projects/rrs/SiteOutline.png";
 import Template from "@images/projects/rrs/Template.png";
 import Workshop from "@images/projects/rrs/RRS Workshop.jpg";
+
+import HomeOld from "@images/projects/rrs/home-old.jpg";
+import HomeNew from "@images/projects/rrs/home-new.jpg";
+
+import Calendar2023_01 from "@images/projects/rrs/Calendar2023-01.jpg";
+import Calendar2023_02 from "@images/projects/rrs/Calendar2023-02.jpg";
+import Calendar2023_03 from "@images/projects/rrs/Calendar2023-03.png";
+import Calendar2024_01 from "@images/projects/rrs/Calendar2024-01.jpg";
+import Calendar2024_02 from "@images/projects/rrs/Calendar2024-02.jpg";
+import Calendar2024_03 from "@images/projects/rrs/Calendar2024-03.jpg";
 ---
 
 <Page title={title}>
@@ -63,7 +72,7 @@ import Workshop from "@images/projects/rrs/RRS Workshop.jpg";
             <h4 slot="title">Print</h4>
             <div class="flex flex-col gap-4">
               <p>Before we tackled the website, I updated the client’s print collateral with the refreshed logo, colors, and typography.</p>
-              <Image src={CalendarBeforeAfter} alt="" />
+              <Image src={Print2024} alt="Examples of print pieces with updated branding." />
             </div>
           </SectionSub2Col>
           <SectionSub2Col>
@@ -130,7 +139,42 @@ import Workshop from "@images/projects/rrs/RRS Workshop.jpg";
   <Section>
     <SectionHead title="Results" />
     <SectionSub>
-      <Image src={HomeBeforeAfter} alt="" />
+      <div class="flex flex-col flex-nowrap gap-16">
+        <div class="flex flex-col flex-nowrap">
+          <h3>Home Page</h3>
+          <div class="grid grid-cols-2 grid-rows-1 gap-4">
+            <div class="flex flex-col flex-nowrap">
+              <h4>Before</h4>
+              <Image src={HomeOld} alt="View of the home page before my work." class="outline outline-indigo-100" />
+            </div>
+            <div class="flex flex-col flex-nowrap">
+              <h4>After</h4>
+              <Image src={HomeNew} alt="View of the home page after my work." class="outline outline-indigo-100" />
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col flex-nowrap">
+          <h3>Calendar</h3>
+          <div class="grid grid-cols-2 grid-rows-1 gap-4">
+            <div class="flex flex-col flex-nowrap">
+              <h4>Before</h4>
+              <div class="flex flex-col flex-nowrap gap-4">
+                <Image src={Calendar2023_01} alt="2023 Calendar Cover" class="outline outline-indigo-100" />
+                <Image src={Calendar2023_02} alt="2023 Calendar Month Image" class="outline outline-indigo-100" />
+                <Image src={Calendar2023_03} alt="2023 Calendar Month Date Grid" class="outline outline-indigo-100" />
+              </div>
+            </div>
+            <div class="flex flex-col flex-nowrap">
+              <h4>After</h4>
+              <div class="flex flex-col flex-nowrap gap-4">
+                <Image src={Calendar2024_01} alt="2024 Calendar Cover" class="outline outline-indigo-100" />
+                <Image src={Calendar2024_02} alt="2024 Calendar Month Image" class="outline outline-indigo-100" />
+                <Image src={Calendar2024_03} alt="2024 Calendar Month Date Grid" class="outline outline-indigo-100" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </SectionSub>
   </Section>
 </Page>
