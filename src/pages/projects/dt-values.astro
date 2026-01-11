@@ -5,9 +5,14 @@ import SectionHead from "@components/SectionHead.astro";
 import SectionSub from "@components/SectionSub.astro";
 import SectionSub2Col from "@components/SectionSub2Col.astro";
 import Details from "@components/Details.astro";
+import Image from "astro/components/Image.astro";
 
 const title = "DeveloperTown Values";
 import Hero from "@images/projects/dtv/dt-hero-dot.jpg";
+import Home from "@images/projects/dtv/home.jpg";
+import HomeMobile from "@images/projects/dtv/home-mobile.jpg";
+import Ownership from "@images/projects/dtv/takeownership.jpg";
+import OwnershipMobile from "@images/projects/dtv/takeownership-mobile.jpg";
 ---
 
 <Page title={title} hero={Hero}>
@@ -57,19 +62,27 @@ import Hero from "@images/projects/dtv/dt-hero-dot.jpg";
   <Section>
     <SectionHead title="Results" />
     <SectionSub>
-      <div class="grid grid-cols-1 grid-rows-4 sm:grid-cols-2 sm:grid-rows-2 xl:grid-cols-4 xl:grid-rows-1 gap-8">
-        <!-- <div>
-          <Image src={Home} alt="" />
+      <div class="flex flex-col lg:flex-row lg:flex-nowrap gap-8 lg:place-content-between">
+        <div class="flex flex-row flex-nowrap gap-4">
+          <div>
+            <h3>Desktop</h3>
+            <Image src={Home} alt="" class="lg:max-h-[860px] w-auto outline outline-indigo-100" />
+          </div>
+          <div>
+            <h3>Mobile</h3>
+            <Image src={HomeMobile} alt="" class="lg:max-h-[860px] w-auto outline outline-indigo-100" />
+          </div>
         </div>
-        <div>
-          <Image src={HomeMobile} alt="" />
+        <div class="flex flex-row flex-nowrap gap-4">
+          <div>
+            <h3>Desktop</h3>
+            <Image src={Ownership} alt="" class="lg:max-h-[860px] w-auto outline outline-indigo-100" />
+          </div>
+          <div>
+            <h3>Mobile</h3>
+            <Image src={OwnershipMobile} alt="" class="lg:max-h-[860px] w-auto outline outline-indigo-100" />
+          </div>
         </div>
-        <div>
-          <Image src={TakeOwnerShip} alt="" />
-        </div>
-        <div>
-          <Image src={TakeOwnerShipMobile} alt="" />
-        </div> -->
       </div>
     </SectionSub>
   </Section>
