@@ -5,7 +5,11 @@ import SectionHead from "@components/SectionHead.astro";
 import SectionSub from "@components/SectionSub.astro";
 import SectionSub2Col from "@components/SectionSub2Col.astro";
 import Details from "@components/Details.astro";
+import Image from "astro/components/Image.astro";
 
+import UNJSPF01 from "@images/projects/unjspf/UNJSPF01.jpg";
+import UNJSPF02 from "@images/projects/unjspf/UNJSPF02.jpg";
+import UNJSPF03 from "@images/projects/unjspf/UNJSPF03.jpg";
 const title = "United Nations Joint Staff Pension Fund";
 ---
 
@@ -73,7 +77,11 @@ const title = "United Nations Joint Staff Pension Fund";
   <Section>
     <SectionHead title="Results" />
     <SectionSub>
-      <p>image comparisons</p>
+      <div class="flex flex-col flex-nowrap sm:grid sm:grid-cols-3 sm:grid-rows-1 gap-8 sm:gap-4">
+        <Image src={UNJSPF01} alt="UNJSPF Website" class="outline outline-indigo-100" />
+        <Image src={UNJSPF02} alt="UNJSPF Website" class="outline outline-indigo-100" />
+        <Image src={UNJSPF03} alt="UNJSPF Website" class="outline outline-indigo-100" />
+      </div>
     </SectionSub>
   </Section>
 </Page>
