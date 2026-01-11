@@ -1,0 +1,114 @@
+---
+import Page from "@layouts/Page.astro";
+import Section from "@components/Section.astro";
+import SectionHead from "@components/SectionHead.astro";
+import SectionSub from "@components/SectionSub.astro";
+import SectionSub2Col from "@components/SectionSub2Col.astro";
+import Organizations from "@components/Organizations.astro";
+const title = "About Me";
+const subtitle = "I’m Chris Kraft, a multidisciplinary designer and web developer based in Cincinnati.";
+---
+
+<Page title={title} subtitle={subtitle}>
+  <Section>
+    <SectionHead title="My Background" />
+    <SectionSub>
+      <div class="text-pretty">
+        <p>With 27<abbr title="Plus">+</abbr> years of experience in the design and internet realms, I treat every project as a unique problem solving opportunity.</p>
+        <p>I graduated in 2002 with a Digital Design degree from the <a href="https://uc.edu" target="_blank">University of Cincinnati's</a> <a href="https://daap.uc.edu/" target="_blank">School of <abbr title="Design, Architecture, Art, and Planning">D.A.A.P</abbr></a>. Since then I have been honing my skills in front-end web design, print, web accessibility, and marketing.</p>
+        <p>While I consider these areas of web and design my wheelhouse, I have also worked lightly in hosting, databases, back-end development, and deployment pipelines.</p>
+        <p>When I'm not designing or coding, I like to balance my screen time with cooking, DIY projects, and reading.</p>
+        <p>Whether it be in work or everyday life, I believe in honesty, working to the best of my ability, asking for help when I need it, and not being afraid to fail.</p>
+      </div>
+    </SectionSub>
+  </Section>
+  <Section>
+    <SectionHead title="My Approach" />
+    <SectionSub>
+      <div class="flex flex-col gap-10 md:gap-16">
+        <SectionSub2Col>
+          <h3 slot="title">Ask Questions</h3>
+          <p>I ask a lot of up-front questions to determine what problems need to be solved. These answers inform how best to proceed with any project. Gathering as much knowledge up front helps prevent rework later in a project.</p>
+        </SectionSub2Col>
+        <hr class="text-indigo-300" />
+        <SectionSub2Col>
+          <h3 slot="title">Plan the Best Approach</h3>
+          <p>&quot;Content precedes design. Design in the absence of content is not design, it's decoration.&quot;<br /> ―Jeffrey Zeldman</p>
+          <p>Content-first design enables me to:</p>
+          <ul class="formatted">
+            <li>Design layouts that scale as the site content grows</li>
+            <li>Build reusable components</li>
+            <li>Prevent redesigning flows and screens later in the project timeline</li>
+          </ul>
+        </SectionSub2Col>
+        <hr class="text-indigo-300" />
+        <SectionSub2Col>
+          <h3 slot="title">Build for Usability & Accessibility</h3>
+          <ul class="formatted">
+            <li>Create a site that is responsive across all devices and optimized for search engines</li>
+            <li>Tailor <abbr title="Content Management System">CMS</abbr> admins to suit the needs of the client</li>
+            <li>Employ best <abbr title="User Experience">UX</abbr> and accessibility practices to be inclusive of all visitors</li>
+          </ul>
+        </SectionSub2Col>
+      </div>
+    </SectionSub>
+  </Section>
+  <Section>
+    <SectionHead title="My Skills" />
+    <SectionSub>
+      <div class="flex flex-col gap-10 md:gap-16">
+        <div class="flex flex-col md:flex-row md:gap-4">
+          <div class="w-full max-w-3xs">
+            <h3>Strengths</h3>
+          </div>
+          <div class="w-full">
+            <ul class="formatted">
+              <li>Website Construction</li>
+              <li>Website Optimization</li>
+              <li>Content Strategy</li>
+              <li>User Experience Design</li>
+            </ul>
+          </div>
+        </div>
+        <hr class="text-indigo-300" />
+        <div class="flex flex-col md:flex-row md:gap-4">
+          <div class="w-full max-w-3xs">
+            <h3>Tools</h3>
+          </div>
+          <div class="w-full">
+            <ul class="formatted">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Word Press</li>
+              <li>Adobe Creative Suite</li>
+              <li>Affinity Design Software</li>
+              <li>Figma</li>
+              <li>Javascript</li>
+            </ul>
+          </div>
+        </div>
+        <hr class="text-indigo-300" />
+        <div class="flex flex-col md:flex-row md:gap-4">
+          <div class="w-full max-w-3xs">
+            <h3>Roles</h3>
+          </div>
+          <div class="w-full">
+            <ul class="formatted">
+              <li>Interaction Designer</li>
+              <li>Content Strategist</li>
+              <li>User Experience Designer</li>
+              <li>Front-End Web Developer</li>
+              <li>Graphic Designer</li>
+              <li>Accessibility Advocate</li>
+              <li>Brand Developer</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </SectionSub>
+  </Section>
+  <Section>
+    <SectionHead title="Organizations I've Worked With" />
+    <Organizations />
+  </Section>
+</Page>

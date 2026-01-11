@@ -1,0 +1,24 @@
+---
+import Page from "@layouts/Page.astro";
+import Section from "@components/Section.astro";
+
+import Image from "astro/components/Image.astro";
+
+const title = "Other Work";
+const subtitle = "A curated collection of my fine art, illustrations, print work, and anything else I've created over the years.";
+
+const images = import.meta.glob<{ default: ImageMetadata }>("@images/otherwork/*.{jpg,jpeg,png,svg,webp}");
+---
+
+<Page title={title} subtitle={subtitle}>
+  <Section>
+    <div class="flex flex-col gap-8 items-center sm:gap-16 sm:flex-row sm:flex-wrap sm:justify-around">
+      {
+        Object.entries(images).map(async ([_path, image], index) => {
+          const { default: imageData } = await image();
+          return <Image format="webp" src={imageData} alt="" height={400} loading={index < 20 ? "eager" : "lazy"} class="outline outline-offset-8 outline-indigo-100" />;
+        })
+      }
+    </div>
+  </Section>
+</Page>

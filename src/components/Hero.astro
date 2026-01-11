@@ -1,0 +1,11 @@
+---
+const { title = "Chris Kraft", subtitle, hero } = Astro.props;
+---
+
+<section class="relative flex flex-col justify-center align-middle aspect-3/1 bg-center bg-no-repeat bg-cover">
+  <div class="container mx-auto px-4 py-16 lg:py-0 typography relative z-30">
+    <h1 class="text-indigo-900">{title}</h1>
+    {subtitle && <p class="text-indigo-900 font-normal text-xl sm:text-2xl text-balance w-full md:max-w-2xl md:mx-auto md:px-4 typography">{subtitle}</p>}
+  </div>
+  <div class="w-full h-full absolute z-10 polka opacity-33"></div>
+</section>

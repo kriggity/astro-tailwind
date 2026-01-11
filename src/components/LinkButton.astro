@@ -1,0 +1,7 @@
+---
+const { slug } = Astro.props;
+---
+
+<a href={slug} class="px-6 py-3 border border-transparent hover:border-indigo-900 no-underline text-indigo-900 bg-indigo-50 hover:bg-transparent duration-300 ease-in-out w-fit text-pretty">
+  <slot />
+</a>

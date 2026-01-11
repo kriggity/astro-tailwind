@@ -1,0 +1,28 @@
+---
+import { Image } from "astro:assets";
+
+const { title = "Headline", imgSRC, imgALT = "", reverse } = Astro.props;
+---
+
+<div
+  class:list={[
+    "flex flex-col gap-8 lg:gap-[108px] lg:max-w-4xl mx-auto",
+    {
+      "lg:flex-row-reverse": reverse,
+    },
+    {
+      "lg:flex-row": !reverse,
+    },
+  ]}>
+  <div class="flex flex-col align-middle self-center w-full max-w-[640px] lg:max-w-[390px]">
+    <Image src={imgSRC} alt={imgALT} class="aspect-auto overflow-hidden" />
+  </div>
+  <div class="typography flex flex-col">
+    <h3>{title}</h3>
+    <hr class="max-w-24 text-indigo-900 mb-4" />
+    <div>
+      <slot />
+    </div>
+    <slot name="LinkButton" />
+  </div>
+</div>

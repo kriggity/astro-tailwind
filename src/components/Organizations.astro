@@ -1,0 +1,38 @@
+---
+import { Image } from "astro:assets";
+import UN from "@assets/images/organizations/un-logo-mark.svg";
+import PG from "@assets/images/organizations/procter-and-gamble-logo-mark.svg";
+import Cisco from "@assets/images/organizations/cisco-logo.svg";
+import Westinghouse from "@assets/images/organizations/westinghouse-logo-mark.svg";
+import ESPN from "@assets/images/organizations/espn-word-mark.svg";
+import Reds from "@assets/images/organizations/cincinnati-reds-logo-mark.svg";
+import SNS from "@assets/images/organizations/sns-logo.svg";
+import BobEvans from "@assets/images/organizations/bob-evans-logo-mark.svg";
+---
+
+<ul class="grid gap-8 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+  <li class="max-w-24 mx-auto">
+    <a href="https://un.org" target="_blank" class="flex align-middle h-full"><Image src={UN} alt="United Nations" /></a>
+  </li>
+  <li class="max-w-24 mx-auto">
+    <a href="https://us.pg.com/" target="_blank" class="flex align-middle h-full"><Image src={PG} alt="Proctor and Gamble" /></a>
+  </li>
+  <li class="max-w-24 mx-auto">
+    <a href="https://www.cisco.com/" target="_blank" class="flex align-middle h-full"><Image src={Cisco} alt="Cisco" /></a>
+  </li>
+  <li class="max-w-24 mx-auto">
+    <a href="https://westinghouse.com/" target="_blank" class="flex align-middle h-full"><Image src={Westinghouse} alt="Westinghouse" /></a>
+  </li>
+  <li class="max-w-24 mx-auto">
+    <a href="https://espn.com" target="_blank" class="flex align-middle h-full"><Image src={ESPN} alt="ESPN" /></a>
+  </li>
+  <li class="max-w-24 mx-auto">
+    <a href="https://www.mlb.com/reds/hall-of-fame" target="_blank" class="flex align-middle h-full"><Image src={Reds} alt="Cincinnati Reds Hall of Fame" /></a>
+  </li>
+  <li class="max-w-24 mx-auto">
+    <a href="https://www.steaknshake.com/" target="_blank" class="flex align-middle h-full"><Image src={SNS} alt="Steak 'n Shake" /></a>
+  </li>
+  <li class="max-w-24 mx-auto">
+    <a href="https://www.bobevans.com/" target="_blank" class="flex align-middle h-full"><Image src={BobEvans} alt="Bob Evans Restaurants" /></a>
+  </li>
+</ul>

@@ -1,0 +1,93 @@
+---
+import Page from "@layouts/Page.astro";
+import Section from "@components/Section.astro";
+import SectionHead from "@components/SectionHead.astro";
+import SectionSub from "@components/SectionSub.astro";
+import SectionSub2Col from "@components/SectionSub2Col.astro";
+import Details from "@components/Details.astro";
+import Image from "astro/components/Image.astro";
+
+import UNJSPF01 from "@images/projects/unjspf/UNJSPF01.jpg";
+import UNJSPF02 from "@images/projects/unjspf/UNJSPF02.jpg";
+import UNJSPF03 from "@images/projects/unjspf/UNJSPF03.jpg";
+const title = "United Nations Joint Staff Pension Fund";
+---
+
+<Page title={title}>
+  <Section>
+    <SectionHead title="Summary" />
+    <div class="max-w-2xl mx-auto px-4 typography gap-4 flex flex-col flex-nowrap">
+      <div class="text-pretty">
+        <p>The United Nations Joint Staff Pension Fund (UNJSPF) was facing difficulties, both externally and internally, with its web presence. Pension Fund contributors and beneficiaries struggled with finding information spread out over two separate sites, which resulted in frustration and a burden on the UNJSPF support staff. Internally, staff content owners were hindered by cumbersome web tools and inefficient work flows.</p>
+        <p>I first conducted technical assessments and staff interviews, in addition to assisting the product designers, who addressed the external content, usability, and accessibility issues. The product designers created a new design system and interface designs from user interviews and prototype testing. I then implemented the improved content organization and page layouts into functional templates and components that included improved administrative tools for the UNJSPF staff to maintain content.</p>
+      </div>
+      <div>
+        <dl class="flex flex-row flex-nowrap gap-2">
+          <dt class="text-indigo-900">Website:</dt>
+          <dd><a href="https://unjspf.org/" target="_blank">unjspf.org</a></dd>
+        </dl>
+      </div>
+    </div>
+  </Section>
+  <Section>
+    <SectionHead title="Roles and Timeline" />
+    <SectionSub>
+      <Details>
+        <h3 slot="summaryTitle" class="mb-0">Technical Consultation</h3>
+        <div class="flex flex-col gap-10">
+          <SectionSub2Col>
+            <h4 slot="title">User Interviews</h4>
+            <p>Sat in on interviews with current and retired UN employees to learn how each person uses the site and what their likes and dislikes were.</p>
+          </SectionSub2Col>
+          <SectionSub2Col>
+            <h4 slot="title">Content Strategy</h4>
+            <p>Assisted <abbr title="User Interface / User Experience">UI/UX</abbr> designers to reorganize the sites' content in response to user interviews, leading to an improved site structure.</p>
+          </SectionSub2Col>
+          <SectionSub2Col>
+            <h4 slot="title">Wireframes</h4>
+            <p>I weighed in with technical considerations as the <abbr title="User Interface / User Experience">UI/UX</abbr> designers turned the results of the content strategy updates into low-fidelity, functional wireframes in Figma. I also sat in on user testing of the wireframes.</p>
+          </SectionSub2Col>
+          <SectionSub2Col>
+            <h4 slot="title"><abbr title="User Interface">UI</abbr> Design</h4>
+            <p>I again weighed in with technical and accessibility considerations as the <abbr title="User Interface / User Experience">UI/UX</abbr> designers turned the wireframes into fully rendered templates.</p>
+          </SectionSub2Col>
+        </div>
+      </Details>
+      <Details>
+        <h3 slot="summaryTitle" class="mb-0">Technical Analysis</h3>
+        <!-- <SectionSub2Col> -->
+        <p>Both UNJSPF websites were built using WordPress, and the goal was to condense them into a single WordPress site. I conducted a technical audit of both WordPress admins to determine what features and plugins:</p>
+        <ul class="formatted">
+          <li>Needed to remain</li>
+          <li>Were not being used and could be removed</li>
+          <li>Could be replaced with newer, better versions</li>
+        </ul>
+        <p>I then conducted interviews with the UNJSPF staff, who maintained the site content, to understand their workflows and pain points. Outdated, custom WordPress tools made updating content difficult and time-consuming. In some instances, the staff needed to submit change requests to separate UN developers — a process that was time-consuming and unpredictable.</p>
+        <p>Using the findings from my technical analysis and interviews, I researched WordPress plugins and workflows that would eliminate frustration, reduce content update time, and remove the dependency on developers for simple content updates.</p>
+        <!-- </SectionSub2Col> -->
+      </Details>
+      <Details>
+        <h3 slot="summaryTitle" class="mb-0">Design Implementation</h3>
+        <p>Implementing the product designers’ design and architecture improvements was a multifaceted phase of the project. The public-facing side of the site needed to be responsive, accessible, and able to deliver the content in many languages — including those that read right-to-left. For the internal, administrative side of the site, I leveraged the tools and libraries of Oxygen Builder for WordPress. With this builder, I created reusable templates and components to allow the website to scale, while allowing for easy maintenance and content creation and updating.</p>
+      </Details>
+      <Details>
+        <h3 slot="summaryTitle" class="mb-0">Technical Lead</h3>
+        <p>Using the new templates and components, I lead an international team of UN developers in migrating content from the old sites to the new site, as per the product designers’ improved content architecture. This content migration verified that the templates and tools made scaling the site with new pages and content was extremely quick and easy. I also worked with several senior developers to implement advanced functionality as it related to language switching and contact form routing.</p>
+      </Details>
+      <Details>
+        <h3 slot="summaryTitle" class="mb-0">Documentation and Training</h3>
+        <p>I created documentation detailing how to update existing content as well as creating new content and how to properly organize it. The ease of training with the UNJSPF staff confirmed that the new tools and workflows were significant improvements. Feedback from the staff after the training was overwhelmingly positive.</p>
+      </Details>
+    </SectionSub>
+  </Section>
+  <Section>
+    <SectionHead title="Results" />
+    <SectionSub>
+      <div class="flex flex-col flex-nowrap sm:grid sm:grid-cols-3 sm:grid-rows-1 gap-8 sm:gap-4">
+        <Image src={UNJSPF01} alt="UNJSPF Website" class="outline outline-indigo-100" />
+        <Image src={UNJSPF02} alt="UNJSPF Website" class="outline outline-indigo-100" />
+        <Image src={UNJSPF03} alt="UNJSPF Website" class="outline outline-indigo-100" />
+      </div>
+    </SectionSub>
+  </Section>
+</Page>

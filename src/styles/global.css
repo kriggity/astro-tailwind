@@ -1,1 +1,125 @@
 @import "tailwindcss";
+
+@theme {
+    --font-sans:
+        "Poppins", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+    --font-serif: "Roboto Slab Variable", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+    --font-body: var(--font-sans);
+
+    --text-6xl: 4rem;
+    --text-5xl: 2.5rem;
+    --leading-tight: 1.2;
+
+    --color-indigo-900: #1f3e55;
+    --color-indigo-800: #355166;
+    --color-indigo-700: #4c6577;
+    --color-indigo-600: #627888;
+    --color-indigo-500: #798b99;
+    --color-indigo-400: #8f9faa;
+    --color-indigo-300: #a5b2bb;
+    --color-indigo-200: #bcc5cc;
+    --color-indigo-100: #d2d8dd;
+    --color-indigo-50: #f4f5f7;
+}
+@layer components {
+    .typography {
+        h1,
+        h2,
+        h3,
+        h4,
+        p,
+        li {
+            color: var(--color-indigo-900);
+        }
+        p,
+        li {
+            font-size: var(--text-base);
+            line-height: var(--leading-normal);
+            max-width: 65ch;
+            font-weight: var(--font-weight-light);
+        }
+        /* p:not(:last-child),
+        p:not(:only-child) {
+            margin-bottom: 1rem;
+        } */
+        p:not(:first-child) {
+            margin-block: 1rem;
+        }
+        ul,
+        ol {
+            &.formatted {
+                list-style-type: disc;
+                li {
+                    margin-left: 2rem;
+                    &:not(:first-child) {
+                        margin-block: 1rem;
+                    }
+                }
+            }
+        }
+        h1,
+        h2 {
+            font-family: var(--font-serif);
+            font-weight: var(--font-weight-normal);
+        }
+        h1,
+        h2,
+        h3,
+        h4 {
+            line-height: var(--leading-tight);
+            margin-bottom: 1rem;
+        }
+        h1 {
+            font-size: 2.25rem;
+            @media (width >= 40rem) {
+                font-size: var(--text-6xl);
+            }
+            text-wrap: balance;
+        }
+        h2 {
+            font-size: 1.75rem;
+            @media (width >= 40rem) {
+                font-size: var(--text-5xl);
+            }
+        }
+        h3 {
+            font-size: var(--text-xl);
+            font-weight: var(--font-weight-medium);
+        }
+        h4 {
+            font-weight: var(--font-weight-semibold);
+        }
+        a {
+            text-decoration: underline;
+            text-decoration-color: inherit;
+            font-size: inherit;
+        }
+        abbr {
+            text-decoration: none;
+        }
+    }
+}
+@layer utilities {
+    .container {
+        width: 100%;
+        max-width: var(--container-6xl);
+        /* @media (width >= 40rem) {
+            max-width: 40rem;
+        }
+        @media (width >= 48rem) {
+            max-width: 48rem;
+        }
+        @media (width >= 64rem) {
+            max-width: 64rem;
+        }
+        @media (width >= 80rem) {
+            max-width: 80rem;
+        }
+        @media (width >= 96rem) {
+            max-width: 96rem;
+        } */
+    }
+}

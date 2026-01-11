@@ -1,0 +1,48 @@
+---
+import "@fontsource-variable/roboto-slab";
+import "@fontsource/poppins";
+import "../styles/global.css";
+
+const { title = "Chris Kraft, Interaction Designer and Accessibility Advocate" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="flex flex-col">
+    <a href="#main" class="sr-only" tabindex="0">Skip to Content</a>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .polka {
+    --base: 4px;
+    --position: var(--base);
+    --size: calc(var(--base) * 2);
+    --offset: -1px;
+
+    background-image: radial-gradient(var(--color-indigo-500) 10%, transparent 15%), radial-gradient(var(--color-indigo-500) 10%, transparent 15%);
+
+    background-position:
+      var(--offset) var(--offset),
+      calc(var(--base) + var(--offset)) calc(var(--base) + var(--offset));
+
+    background-size: var(--size) var(--size);
+
+    background-color: transparent;
+  }
+</style>
