@@ -14,9 +14,6 @@ const { title = "Headline", imgSRC, imgALT = "", reverse } = Astro.props;
       "lg:flex-row": !reverse,
     },
   ]}>
-  <div class="flex flex-col align-middle self-center w-full max-w-[640px] lg:max-w-[390px]">
-    <Image src={imgSRC} alt={imgALT} class="aspect-auto overflow-hidden" />
-  </div>
   <div class="typography flex flex-col">
     <h3>{title}</h3>
     <hr class="max-w-24 text-indigo-900 mb-4" />
@@ -24,5 +21,8 @@ const { title = "Headline", imgSRC, imgALT = "", reverse } = Astro.props;
       <slot />
     </div>
     <slot name="LinkButton" />
+  </div>
+  <div class="flex flex-col align-middle self-center w-full max-w-[640px] lg:max-w-[390px]">
+    <Image src={imgSRC} alt={imgALT} class="aspect-auto overflow-hidden" />
   </div>
 </div>
