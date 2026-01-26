@@ -40,6 +40,9 @@
             line-height: var(--leading-normal);
             max-width: 65ch;
             font-weight: var(--font-weight-light);
+            strong {
+                font-weight: 600;
+            }
         }
         /* p:not(:last-child),
         p:not(:only-child) {
