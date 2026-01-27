@@ -6,15 +6,16 @@ import SectionSub from "@components/SectionSub.astro";
 import SectionSub2Col from "@components/SectionSub2Col.astro";
 import Details from "@components/Details.astro";
 import Image from "astro/components/Image.astro";
-const title = "DeveloperTown Values";
-import Hero from "@images/work/dtv/dt-hero-dot.jpg";
 import Home from "@images/work/dtv/home.jpg";
 import HomeMobile from "@images/work/dtv/home-mobile.jpg";
 import Ownership from "@images/work/dtv/takeownership.jpg";
 import OwnershipMobile from "@images/work/dtv/takeownership-mobile.jpg";
+
+const title = "DeveloperTown Values";
+const subtitle = "Communicating Culture Clearly Without Unnecessary Complexity";
 ---
 
-<Page title={title} hero={Hero}>
+<Page title={title} subtitle={subtitle}>
   <Section>
     <SectionHead title="Summary" />
     <div class="max-w-2xl mx-auto typography gap-4 flex flex-col">

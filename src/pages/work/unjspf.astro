@@ -3,7 +3,15 @@ import Page from "@layouts/Page.astro";
 import Section from "@components/Section.astro";
 import SectionHead from "@components/SectionHead.astro";
 import SectionSub from "@components/SectionSub.astro";
-const title = "United Nations Joint Staff Pension Fund (UNJSPF)";
+import SectionSub2Col from "@components/SectionSub2Col.astro";
+import Details from "@components/Details.astro";
+import Image from "astro/components/Image.astro";
+
+import UNJSPF01 from "@images/work/unjspf/UNJSPF01.jpg";
+import UNJSPF02 from "@images/work/unjspf/UNJSPF02.jpg";
+import UNJSPF03 from "@images/work/unjspf/UNJSPF03.jpg";
+
+const title = "United Nations Joint Staff Pension Fund";
 const subtitle = "Modernizing a Mission-Critical Platform for a Global Audience";
 ---
 
@@ -11,128 +19,79 @@ const subtitle = "Modernizing a Mission-Critical Platform for a Global Audience"
   <Section>
     <SectionHead title="Summary" />
     <div class="max-w-2xl mx-auto typography gap-4 flex flex-col flex-nowrap">
-      <div class="text-pretty">
-        <p>The <a href="https://unjspf.org/" target="_blank">United Nations Joint Staff Pension Fund</a> supports current and retired United Nations employees around the world. The organization’s website plays a critical role in communicating complex pension information to a diverse, international audience — many of whom rely on clarity, accessibility, and trust when navigating retirement-related content.</p>
-        <p>I partnered with UNJSPF leadership, internal development teams, and UI/UX specialists to modernize an aging website, focusing on implementation, accessibility, and long-term maintainability while preserving stability for a mission-critical system.</p>
-      </div>
+      <p>The United Nations Joint Staff Pension Fund (UNJSPF) supports current and retired United Nations employees around the world. Its website plays a critical role in communicating complex pension information to a diverse, global audience—many of whom rely on clarity, accessibility, and trust when navigating retirement-related content.</p>
+      <p>I partnered with UNJSPF leadership, internal development teams, and UI/UX specialists to modernize an aging website. While the specialists led user research, content strategy, and interface design, my role focused on front-end implementation, accessibility, and translating that work into a scalable, maintainable WordPress system.</p>
+      <dl class="flex flex-row flex-nowrap gap-2">
+        <dt class="text-indigo-900">Website:</dt>
+        <dd><a href="https://unjspf.org/" target="_blank">unjspf.org</a></dd>
+      </dl>
     </div>
   </Section>
+
   <Section>
     <SectionHead title="Project Snapshot" />
     <SectionSub>
       <div class="text-pretty flex flex-col gap-8">
         <div>
-          <h3>Role</h3>
-          <p class="mt-0">Human Factors Software Engineer / Front-End Implementation Lead</p>
+          <h3 slot="title">Role</h3>
+          <p>Human Factors Software Engineer / Front-End Implementation Lead</p>
         </div>
         <div>
-          <h3>Collaboration</h3>
-          <p class="mt-0">
-            UI/UX specialists (research, content strategy, interface design)
-            <br />UNJSPF leadership and internal development team
-          </p>
+          <h3 slot="title">Collaboration</h3>
+          <p>UI/UX specialists, UNJSPF leadership, and internal UN developers</p>
         </div>
         <div>
-          <h3>Scope</h3>
-          <p class="mt-0">Front-end development, WordPress architecture, accessibility, editorial workflows</p>
+          <h3 slot="title">Scope</h3>
+          <p>Front-end development, WordPress architecture, accessibility, editorial workflows</p>
         </div>
         <div>
-          <h3>Audience</h3>
-          <p class="mt-0">Active and retired UN staff across multiple countries, languages, and accessibility needs</p>
-        </div>
-        <div>
-          <h3>Primary Goals</h3>
-          <ul class="formatted">
-            <li>Support a new content strategy with a clear, scalable site structure</li>
-            <li>Improve accessibility and usability for a global audience</li>
-            <li>Reduce reliance on developers for routine content updates</li>
-          </ul>
+          <h3 slot="title">Audience</h3>
+          <p>Active and retired UN staff across multiple countries, languages, and accessibility needs</p>
         </div>
       </div>
     </SectionSub>
   </Section>
+
   <Section>
     <SectionHead title="The Challenge" />
     <SectionSub>
-      <div class="text-pretty">
-        <p>Over time, the UNJSPF website had grown organically, resulting in fragmented content, inconsistent navigation, and publishing workflows that made even small updates dependent on developers.</p>
-        <p>For an organization responsible for pension and retirement benefits, these issues introduced real risks — not only to usability and accessibility, but also to user confidence and internal efficiency. Any solution needed to modernize the platform while remaining stable, secure, and easy to maintain long-term.</p>
-      </div>
+      <p>Over time, the UNJSPF website had grown organically, resulting in fragmented content, inconsistent navigation, and workflows that made even small updates dependent on developers. For an organization responsible for pension and retirement benefits, these issues introduced usability, accessibility, and trust risks.</p>
     </SectionSub>
   </Section>
+
   <Section>
-    <SectionHead title="My Role" />
+    <SectionHead title="My Role & Approach" />
     <SectionSub>
-      <div class="text-pretty">
-        <p>This project was highly collaborative.</p>
-        <p>UI/UX specialists led user interviews, content strategy, and interface redesign. My role focused on translating that work into a reliable, accessible, and maintainable WordPress implementation that aligned with both user needs and internal workflows.</p>
-        <p>I served as the bridge between strategy and execution — ensuring research insights and design decisions could be realistically supported by the site’s technical architecture without increasing complexity or technical debt.</p>
-      </div>
+      <Details>
+        <h3 slot="summaryTitle" class="mb-0">Collaboration & Research Support</h3>
+        <p>UI/UX specialists led user interviews, content strategy, and interface redesign. I partnered closely with them during research and testing to ensure insights could be realistically supported by the site’s technical architecture and accessibility requirements.</p>
+      </Details>
+      <Details>
+        <h3 slot="summaryTitle" class="mb-0">Technical & Workflow Analysis</h3>
+        <p>I conducted a comprehensive audit of both existing WordPress sites, evaluating templates, plugins, and custom tools. I interviewed UNJSPF content editors to understand publishing workflows and pain points, identifying opportunities to reduce friction and remove dependency on developers for routine updates.</p>
+      </Details>
+      <Details>
+        <h3 slot="summaryTitle" class="mb-0">Implementation Strategy</h3>
+        <p>Based on the approved content strategy and designs, I defined a WordPress architecture that supported clear content hierarchies, reusable templates, and accessibility best practices. The goal was to create a system that could scale without increasing technical debt.</p>
+      </Details>
     </SectionSub>
   </Section>
+
   <Section>
-    <SectionHead title="Approach & Contributions" />
+    <SectionHead title="Solution & Outcomes" />
     <SectionSub>
-      <div class="text-pretty flex flex-col gap-8">
-        <div>
-          <h3>Partnering During Research</h3>
-          <ul class="formatted">
-            <li>Collaborated with UI/UX specialists during user interviews with current and retired UN employees worldwide</li>
-            <li>Helped evaluate research insights through a technical and accessibility lens to inform implementation decisions early</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Technical & Structural Analysis</h3>
-          <ul class="formatted">
-            <li>Conducted a comprehensive analysis of the existing website’s structure, templates, and publishing workflows</li>
-            <li>Identified constraints and opportunities to support the new content strategy within WordPress</li>
-            <li>Worked directly with content editors to understand workflow pain points and reduce friction</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Implementation Strategy</h3>
-          <ul class="formatted">
-            <li>Defined a WordPress architecture that supported the redesigned content hierarchy and navigation</li>
-            <li>Prioritized accessibility, semantic structure, and consistency across templates</li>
-            <li>Focused on flexibility for editors, minimizing the need for developer involvement in day-to-day updates</li>
-          </ul>
-        </div>
-      </div>
+      <p>Working alongside UI/UX specialists and UN developers, I led the front-end implementation of a new WordPress platform that translated strategy and design into a stable, maintainable system. The final solution improved content clarity, enabled non-technical staff to manage content independently, and established a foundation for future accessibility improvements.</p>
     </SectionSub>
   </Section>
+
   <Section>
-    <SectionHead title="The Solution" />
+    <SectionHead title="Results" />
     <SectionSub>
-      <div class="text-pretty">
-        <p>Working alongside UI/UX specialists and UN developers, I led the front-end implementation of a new WordPress platform that translated the redesigned experience into a stable, scalable system.</p>
-        <p class="">The solution:</p>
-        <ul class="formatted">
-          <li>Supported the new content organization and interface design</li>
-          <li>Improved accessibility and clarity for complex pension-related content</li>
-          <li>Enabled non-technical staff to create, update, and manage content independently</li>
-          <li>Reduced long-term maintenance overhead for the development team</li>
-        </ul>
+      <div class="flex flex-col flex-nowrap sm:grid sm:grid-cols-3 sm:grid-rows-1 gap-8 sm:gap-4">
+        <Image src={UNJSPF01} alt="UNJSPF Website" class="outline outline-indigo-100" />
+        <Image src={UNJSPF02} alt="UNJSPF Website" class="outline outline-indigo-100" />
+        <Image src={UNJSPF03} alt="UNJSPF Website" class="outline outline-indigo-100" />
       </div>
-    </SectionSub>
-  </Section>
-  <Section>
-    <SectionHead title="Outcomes" />
-    <SectionSub>
-      <div class="text-pretty">
-        <p class="">While the project emphasized long-term stability over short-term metrics, the redesigned platform delivered meaningful organizational improvements:</p>
-        <ul class="formatted">
-          <li>Clearer content structure for a diverse, global audience</li>
-          <li>Improved confidence among content editors and stakeholders</li>
-          <li>A maintainable foundation that supports future growth and accessibility improvements</li>
-        </ul>
-      </div>
-    </SectionSub>
-  </Section>
-  <Section>
-    <SectionHead title="Why This Project Matters" />
-    <SectionSub>
-      <p>This work reflects the type of role I’m most effective in: partnering with specialists, understanding user and organizational needs, and delivering thoughtful implementations that turn strategy into systems teams can actually maintain.</p>
-      <p>Rather than focusing on visual design, I bring structure, accessibility, and execution rigor to complex projects — helping organizations modernize without introducing unnecessary risk.</p>
     </SectionSub>
   </Section>
 </Page>
