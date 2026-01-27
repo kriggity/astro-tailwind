@@ -54,13 +54,22 @@
         ul,
         ol {
             &.formatted {
-                list-style-type: disc;
                 li {
                     margin-left: 2rem;
                     &:not(:first-child) {
                         margin-block: 1rem;
                     }
                 }
+            }
+        }
+        ul {
+            &.formatted {
+                list-style-type: disc;
+            }
+        }
+        ol {
+            &.formatted {
+                list-style-type: decimal;
             }
         }
         h1,
