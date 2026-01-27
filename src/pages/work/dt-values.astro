@@ -6,7 +6,6 @@ import SectionSub from "@components/SectionSub.astro";
 import SectionSub2Col from "@components/SectionSub2Col.astro";
 import Details from "@components/Details.astro";
 import Image from "astro/components/Image.astro";
-
 const title = "DeveloperTown Values";
 import Hero from "@images/work/dtv/dt-hero-dot.jpg";
 import Home from "@images/work/dtv/home.jpg";
@@ -18,58 +17,77 @@ import OwnershipMobile from "@images/work/dtv/takeownership-mobile.jpg";
 <Page title={title} hero={Hero}>
   <Section>
     <SectionHead title="Summary" />
-    <div class="max-w-2xl mx-auto px-4 typography gap-4 flex flex-col flex-nowrap">
-      <div class="text-pretty">
-        <p><a href="https://developertown.com/" target="_blank">DeveloperTown</a> wanted to create a custom microsite to display its vision, mission, and values that was visually interesting and more engaging than a subsection of an About Us page. Working with content from our company-wide workshop, I collaborated with UX designers to design, author, and build the site. This was an exercise in creative design and then building that interface out using a (then) new website tool: <a href="https://astro.build/" target="_blank">Astro</a>.</p>
-      </div>
-      <div>
-        <dl class="flex flex-row flex-nowrap gap-2">
-          <dt class="text-indigo-900">Website:</dt>
-          <dd><a href="https://values.developertown.com/" target="_blank">values.developertown.com</a></dd>
-        </dl>
-      </div>
+    <div class="max-w-2xl mx-auto typography gap-4 flex flex-col">
+      <p class="text-pretty">
+        <a href="https://developertown.com/" target="_blank">DeveloperTown</a> wanted a focused, intentional way to communicate its values—separate from marketing content and without unnecessary technical or visual complexity.
+      </p>
+      <p class="text-pretty">Working with content developed during a company-wide values workshop and in collaboration with internal stakeholders, I translated those principles into a lightweight, accessible microsite. The emphasis was on clarity, performance, and long-term maintainability rather than visual polish or over-engineering.</p>
+      <dl class="flex flex-row flex-nowrap gap-2">
+        <dt class="text-indigo-900">Website:</dt>
+        <dd>
+          <a href="https://values.developertown.com/" target="_blank"> values.developertown.com </a>
+        </dd>
+      </dl>
     </div>
   </Section>
   <Section>
-    <SectionHead title="Roles and Timeline" />
+    <SectionHead title="Role & Scope" />
     <SectionSub>
       <Details>
-        <h3 slot="summaryTitle" class="mb-0">Content Creation</h3>
-        <div class="flex flex-col gap-10">
-          <SectionSub2Col>
-            <h4 slot="title">Photography and Video</h4>
-            <p>I assisted with photography and video (including drone capture) sessions.</p>
-          </SectionSub2Col>
-          <SectionSub2Col>
-            <h4 slot="title">Copywriting</h4>
-            <p>I co-authored and refined the written content for the site.</p>
-          </SectionSub2Col>
-        </div>
+        <h3 slot="summaryTitle" class="mb-0">My Role</h3>
+        <p>Front-end implementation and technical decision-making. I partnered with internal stakeholders to structure content, select an appropriate platform, and build a fast, accessible site that supported the message without distraction.</p>
       </Details>
       <Details>
-        <h3 slot="summaryTitle" class="mb-0">Information Architecture and Content Strategy</h3>
-        <p>I collaborated with the UX designers to organize the site content and arrange the information flow of each page template.</p>
+        <h3 slot="summaryTitle" class="mb-0">Primary Goals</h3>
+        <ul class="list-disc pl-6">
+          <li>Clearly communicate company values in a dedicated space</li>
+          <li>Prioritize performance, accessibility, and simplicity</li>
+          <li>Minimize long-term maintenance and technical overhead</li>
+        </ul>
+      </Details>
+    </SectionSub>
+  </Section>
+  <Section>
+    <SectionHead title="Approach" />
+    <SectionSub>
+      <Details>
+        <h3 slot="summaryTitle" class="mb-0">Content-First Structure</h3>
+        <p>I worked with stakeholders to organize the values content into a clear hierarchy, ensuring each section was readable, focused, and supported by consistent page patterns.</p>
       </Details>
       <Details>
-        <h3 slot="summaryTitle" class="mb-0">Design Implementation and Technologies</h3>
+        <h3 slot="summaryTitle" class="mb-0">Technical Strategy</h3>
         <div class="flex flex-col gap-10">
           <SectionSub2Col>
             <h4 slot="title">Astro</h4>
-            <p>I created the site using the Astro framework and TailwindCSS. Astro allowed me to take advantage of reusable templates and components while building, and then created a fast and lightweight static site for deployment.</p>
+            <p>
+              I built the site using <a href="https://astro.build/" target="_blank">Astro</a> to prioritize performance, simplicity, and long-term maintainability. Static generation allowed the content to remain fast, secure, and easy to evolve without ongoing platform complexity.
+            </p>
           </SectionSub2Col>
           <SectionSub2Col>
-            <h4 slot="title">Tailwind</h4>
-            <p>I used <a href="https://tailwindcss.com/" target="_blank">Tailwind</a> as a compliment to Astro. The utility-first approach of Tailwind helped speed up building the base templates and styling. Tailwind's flexibility allowed me to create the customized angles of the UI as the layout changed across many viewport sizes. The optimized CSS output contributed to an overall lean build.</p>
+            <h4 slot="title">Tailwind CSS</h4>
+            <p>
+              <a href="https://tailwindcss.com/" target="_blank">Tailwind CSS</a> was used to rapidly implement consistent layouts while keeping the final CSS output minimal. Its utility-first approach supported responsive layouts without introducing custom CSS overhead.
+            </p>
           </SectionSub2Col>
         </div>
+      </Details>
+      <Details>
+        <h3 slot="summaryTitle" class="mb-0">Accessibility & Usability</h3>
+        <p>Semantic HTML, readable typography, and predictable navigation patterns were prioritized to ensure the content was accessible and easy to consume across devices and assistive technologies.</p>
       </Details>
     </SectionSub>
   </Section>
   <Section>
     <SectionHead title="Results" />
     <SectionSub>
-      <div class="flex flex-col lg:flex-row lg:flex-nowrap gap-8 lg:place-content-between">
-        <div class="flex flex-row flex-nowrap gap-4">
+      <p class="max-w-2xl typography">The final site delivered a clean, purpose-driven experience that allowed DeveloperTown’s values to stand on their own—without visual noise or technical bloat.</p>
+      <ul class="list-disc pl-6 max-w-2xl typography">
+        <li>Fast-loading, lightweight static site</li>
+        <li>Clear content structure aligned with company culture</li>
+        <li>Low-maintenance foundation that can evolve over time</li>
+      </ul>
+      <div class="flex flex-col lg:flex-row lg:flex-nowrap gap-8 mt-10">
+        <div class="flex gap-4">
           <div>
             <h3>Desktop</h3>
             <Image src={Home} alt="" class="lg:max-h-[860px] w-auto outline outline-indigo-100" />
@@ -79,7 +97,7 @@ import OwnershipMobile from "@images/work/dtv/takeownership-mobile.jpg";
             <Image src={HomeMobile} alt="" class="lg:max-h-[860px] w-auto outline outline-indigo-100" />
           </div>
         </div>
-        <div class="flex flex-row flex-nowrap gap-4">
+        <div class="flex gap-4">
           <div>
             <h3>Desktop</h3>
             <Image src={Ownership} alt="" class="lg:max-h-[860px] w-auto outline outline-indigo-100" />
