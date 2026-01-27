@@ -1,11 +1,32 @@
 ---
 import Section from "@components/Section.astro";
+import SectionHead from "@components/SectionHead.astro";
+import SectionSub from "@components/SectionSub.astro";
 import Page from "@layouts/Page.astro";
 const title = "Page Not Found";
 ---
 
 <Page title={title}>
   <Section>
-    <p>404 content</p>
+    <SectionHead title="This page isn't available." />
+    <SectionSub>
+      <div class="typography">
+        <p>The page you're looking for doesn't exist, or the link may be outdated. Either way, you're not lost.</p>
+        <p>I design and build accessible, content-driven websites focused on clarity, usability, and real-world outcomes.</p>
+      </div>
+      <nav aria-label="Helpful links">
+        <ul class="flex flex-col gap-1">
+          <li class="box-border">
+            <a href="/work/" class="inline-block py-3 pr-6 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black">View selected work</a>
+          </li>
+          <li class="box-border">
+            <a href="/" class="inline-block py-3 pr-6 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black">Go to the home page</a>
+          </li>
+          <li class="box-border">
+            <a href="/contact/" class="inline-block py-3 pr-6 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black">Get in touch</a>
+          </li>
+        </ul>
+      </nav>
+    </SectionSub>
   </Section>
 </Page>
