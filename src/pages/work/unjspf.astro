@@ -5,16 +5,26 @@ import SectionHead from "@components/SectionHead.astro";
 import SectionSub from "@components/SectionSub.astro";
 import Details from "@components/Details.astro";
 import Image from "astro/components/Image.astro";
-
 import UNJSPF01 from "@images/work/unjspf/UNJSPF01.jpg";
 import UNJSPF02 from "@images/work/unjspf/UNJSPF02.jpg";
 import UNJSPF03 from "@images/work/unjspf/UNJSPF03.jpg";
-
 const title = "United Nations Joint Staff Pension Fund";
 const subtitle = "Modernizing a Mission-Critical Platform for a Global Audience";
 ---
 
 <Page title={title} subtitle={subtitle}>
+  <slot slot="HeadMeta">
+    <title>United Nations Joint Staff Pension website | Accessibility-Focused UX & Front-End Case Study</title>
+    <meta name="description" content="United Nations Joint Staff Pension website case study by Chris Kraft, highlighting accessibility-focused UX strategy, content structure, and front-end implementation for a real-world platform." />
+    <meta name="keywords" content="Chris Kraft, United Nations Joint Staff Pension website, case study, accessibility, UX strategy, front-end development, inclusive design, WordPress, Astro" />
+    <meta property="og:title" content="United Nations Joint Staff Pension website Case Study" />
+    <meta property="og:description" content="An accessibility-focused UX and front-end case study by Chris Kraft, centered on usability, content clarity, and real-world constraints." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://kriggity.com/work/[project-slug]/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="United Nations Joint Staff Pension website Case Study" />
+    <meta name="twitter:description" content="Accessibility-focused UX strategy and front-end implementation case study." />
+  </slot>
   <Section>
     <SectionHead title="Summary" />
     <div class="max-w-2xl mx-auto typography gap-4 flex flex-col flex-nowrap">
@@ -26,7 +36,6 @@ const subtitle = "Modernizing a Mission-Critical Platform for a Global Audience"
       </dl>
     </div>
   </Section>
-
   <Section>
     <SectionHead title="Project Snapshot" />
     <SectionSub>
@@ -50,14 +59,12 @@ const subtitle = "Modernizing a Mission-Critical Platform for a Global Audience"
       </div>
     </SectionSub>
   </Section>
-
   <Section>
     <SectionHead title="The Challenge" />
     <SectionSub>
       <p>Over time, the UNJSPF website had grown organically, resulting in fragmented content, inconsistent navigation, and workflows that made even small updates dependent on developers. For an organization responsible for pension and retirement benefits, these issues introduced usability, accessibility, and trust risks.</p>
     </SectionSub>
   </Section>
-
   <Section>
     <SectionHead title="My Role & Approach" />
     <SectionSub>
@@ -75,14 +82,12 @@ const subtitle = "Modernizing a Mission-Critical Platform for a Global Audience"
       </Details>
     </SectionSub>
   </Section>
-
   <Section>
     <SectionHead title="Solution & Outcomes" />
     <SectionSub>
       <p>Working alongside UI/UX specialists and UN developers, I led the front-end implementation of a new WordPress platform that translated strategy and design into a stable, maintainable system. The final solution improved content clarity, enabled non-technical staff to manage content independently, and established a foundation for future accessibility improvements.</p>
     </SectionSub>
   </Section>
-
   <Section>
     <SectionHead title="Results" />
     <SectionSub>

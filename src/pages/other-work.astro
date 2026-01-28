@@ -11,6 +11,11 @@ const images = import.meta.glob<{ default: ImageMetadata }>("@images/otherwork/*
 ---
 
 <Page title={title} subtitle={subtitle}>
+  <slot slot="HeadMeta">
+    <title>Other Work by Chris Kraft</title>
+    <meta name="robots" content="noindex, follow" />
+  </slot>
+
   <Section>
     <div class="flex flex-col gap-8 items-center sm:gap-16 sm:flex-row sm:flex-wrap sm:justify-around">
       {

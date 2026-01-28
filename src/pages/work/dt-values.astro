@@ -16,6 +16,18 @@ const subtitle = "Communicating Culture Clearly Without Unnecessary Complexity";
 ---
 
 <Page title={title} subtitle={subtitle}>
+  <slot slot="HeadMeta">
+    <title>DeveloperTown Values website | Accessibility-Focused UX & Front-End Case Study</title>
+    <meta name="description" content="DeveloperTown Values website case study by Chris Kraft, highlighting accessibility-focused UX strategy, content structure, and front-end implementation for a real-world platform." />
+    <meta name="keywords" content="Chris Kraft, DeveloperTown Values website, case study, accessibility, UX strategy, front-end development, inclusive design, WordPress, Astro" />
+    <meta property="og:title" content="DeveloperTown Values website Case Study" />
+    <meta property="og:description" content="An accessibility-focused UX and front-end case study by Chris Kraft, centered on usability, content clarity, and real-world constraints." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://kriggity.com/work/[project-slug]/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="DeveloperTown Values website Case Study" />
+    <meta name="twitter:description" content="Accessibility-focused UX strategy and front-end implementation case study." />
+  </slot>
   <Section>
     <SectionHead title="Summary" />
     <div class="max-w-2xl mx-auto typography gap-4 flex flex-col">
