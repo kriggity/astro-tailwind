@@ -3,13 +3,24 @@ import Page from "@layouts/Page.astro";
 import Section from "@components/Section.astro";
 import SectionHead from "@components/SectionHead.astro";
 import SectionSub from "@components/SectionSub.astro";
-import SectionSub2Col from "@components/SectionSub2Col.astro";
 import Organizations from "@components/Organizations.astro";
 const title = "About Me";
 const subtitle = "Strategy, accessibility, and hands-on execution for content-driven web platforms.";
 ---
 
 <Page title={title} subtitle={subtitle}>
+  <slot slot="HeadMeta">
+    <title>About Chris Kraft | Accessibility-Focused Front-End Developer & UX Engineer</title>
+    <meta name="description" content="Learn more about Chris Kraft — an accessibility-focused front-end developer and UX engineer with 25+ years of experience designing and building usable, inclusive web platforms." />
+    <meta name="keywords" content="Chris Kraft, front-end developer, UX engineer, accessibility advocate, web accessibility, UX strategy, inclusive design, Astro, WordPress, WCAG" />
+    <meta property="og:title" content="About Chris Kraft" />
+    <meta property="og:description" content="Accessibility-focused front-end developer and UX engineer with 25+ years of experience building inclusive, usable web platforms." />
+    <meta property="og:type" content="profile" />
+    <meta property="og:url" content="https://kriggity.com/about/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="About Chris Kraft" />
+    <meta name="twitter:description" content="Accessibility-focused front-end developer and UX engineer with 25+ years of experience building inclusive web platforms." />
+  </slot>
   <Section>
     <SectionHead title="My Background" />
     <SectionSub>

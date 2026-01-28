@@ -7,6 +7,20 @@ const title = "Page Not Found";
 ---
 
 <Page title={title}>
+  <slot slot="HeadMeta">
+    <meta name="description" content="Learn more about Chris Kraft — an accessibility-focused front-end developer and UX engineer with 25+ years of experience designing and building usable, inclusive web platforms." />
+
+    <meta name="keywords" content="Chris Kraft, front-end developer, UX engineer, accessibility advocate, web accessibility, UX strategy, inclusive design, Astro, WordPress, WCAG" />
+
+    <meta property="og:title" content="About Chris Kraft" />
+    <meta property="og:description" content="Accessibility-focused front-end developer and UX engineer with 25+ years of experience building inclusive, usable web platforms." />
+    <meta property="og:type" content="profile" />
+    <meta property="og:url" content="https://kriggity.com/about/" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="About Chris Kraft" />
+    <meta name="twitter:description" content="Accessibility-focused front-end developer and UX engineer with 25+ years of experience building inclusive web platforms." />
+  </slot>
   <Section>
     <SectionHead title="This page isn't available." />
     <SectionSub>

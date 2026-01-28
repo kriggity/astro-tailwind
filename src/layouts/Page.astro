@@ -8,6 +8,7 @@ const { title, subtitle, hero } = Astro.props;
 ---
 
 <Base title={title}>
+  <slot name="HeadMeta" slot="HeadMeta" />
   <Header />
   <main class="flex flex-col flex-nowrap gap-16 lg:gap-32 pb-16 lg:pb-32" id="main">
     <Hero title={title} subtitle={subtitle} hero={hero} />
