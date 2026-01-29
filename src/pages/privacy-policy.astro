@@ -5,6 +5,10 @@ const title = "Privacy Policy";
 ---
 
 <Page title={title}>
+  <slot slot="HeadMeta">
+    <title>{title}</title>
+    <meta name="robots" content="noindex, follow" />
+  </slot>
   <Section>
     <div class="typography mx-auto">
       <p>Last updated: January 11, 2026</p>
