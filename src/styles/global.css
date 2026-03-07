@@ -40,6 +40,9 @@
             line-height: var(--leading-normal);
             max-width: 65ch;
             font-weight: var(--font-weight-light);
+            strong {
+                font-weight: 600;
+            }
         }
         /* p:not(:last-child),
         p:not(:only-child) {
@@ -51,13 +54,22 @@
         ul,
         ol {
             &.formatted {
-                list-style-type: disc;
                 li {
                     margin-left: 2rem;
                     &:not(:first-child) {
                         margin-block: 1rem;
                     }
                 }
+            }
+        }
+        ul {
+            &.formatted {
+                list-style-type: disc;
+            }
+        }
+        ol {
+            &.formatted {
+                list-style-type: decimal;
             }
         }
         h1,

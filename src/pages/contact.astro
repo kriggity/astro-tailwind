@@ -1,12 +1,69 @@
 ---
 import Page from "@layouts/Page.astro";
 import Section from "@components/Section.astro";
+import LinkButton from "@components/LinkButton.astro";
+import SectionHead from "@components/SectionHead.astro";
+import SectionSub from "@components/SectionSub.astro";
 const title = "Contact";
-const subtitle = "Want to collaborate? Need consultation? Let's chat!";
+const subtitle = "Let's talk about improving your website.";
 ---
 
 <Page title={title} subtitle={subtitle}>
+  <slot slot="HeadMeta">
+    <title>Contact Chris Kraft | Accessibility-Focused Front-End Developer</title>
+    <meta name="description" content="Get in touch with Chris Kraft — an accessibility-focused front-end developer and UX engineer. Reach out to discuss inclusive design, web strategy, or collaboration opportunities." />
+    <meta name="keywords" content="Chris Kraft, contact, front-end developer, UX engineer, accessibility consultant, web accessibility, inclusive design, UX strategy" />
+    <meta property="og:title" content="Contact Chris Kraft" />
+    <meta property="og:description" content="Reach out to Chris Kraft to discuss accessibility-focused front-end development, UX strategy, or collaboration opportunities." />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Contact Chris Kraft" />
+    <meta name="twitter:description" content="Get in touch to discuss accessibility-focused front-end development, UX strategy, or collaboration." />
+  </slot>
   <Section>
-    <a href="mailto:chris.kraft@kriggity.com" class="text-xl sm:text-2xl md:text-4xl lg:text-6xl text-center text-indigo-800 hover:underline focus:underline">chris.kraft@kriggity.com</a>
-  </Section>
-</Page>
+    <div class="typography flex flex-col gap-12 md:gap-16">
+      <SectionSub>
+        <p>I work with organizations to untangle complex websites—improving structure, accessibility, and front-end execution. If you're dealing with legacy decisions, scaling issues, or unclear next steps, I can help.</p>
+      </SectionSub>
+      <div class="flex flex-col flex-nowrap gap-6">
+        <SectionHead title="Email Me" />
+        <SectionSub>
+          <a href="mailto:chris.kraft@kriggity.com" class="flex flex-row text-nowrap px-6 py-3 border border-indigo-800 no-underline text-white bg-indigo-800 hover:bg-transparent focus:bg-transparent hover:text-indigo-900 focus:text-indigo-900 duration-300 ease-in-out w-fit gap-4"
+            ><span>chris.kraft@kriggity.com</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2zm-2 0l-8 5l-8-5zm0 12H4V8l8 5l8-5z"></path></svg>
+            <slot />
+          </a>
+          <p>I usually respond within one business day. No pitches—just a conversation.</p>
+        </SectionSub>
+      </div>
+      <div class="flex flex-col flex-nowrap gap-6">
+        <SectionHead title="Good fit if you're…" />
+        <SectionSub>
+          <ul class="formatted mb-10">
+            <li>Improving or restructuring an existing website</li>
+            <li>Navigating accessibility or compliance concerns</li>
+            <li>Looking for front-end execution that supports strategy</li>
+            <li>Unsure what the <em>right</em> next step is</li>
+          </ul>
+          <h3>Not sure yet?</h3>
+          <p>That's fine—describe what's confusing or frustrating and we'll start there.</p>
+        </SectionSub>
+      </div>
+      <div class="flex flex-col flex-nowrap gap-6">
+        <SectionHead title="What happens next" />
+        <SectionSub>
+          <ol class="formatted">
+            <li>You email me with a bit of context</li>
+            <li>I'll respond with thoughts or a clarifying question</li>
+            <li>If it makes sense, we'll set up a short call</li>
+          </ol>
+        </SectionSub>
+      </div>
+      <div class="flex flex-col flex-nowrap gap-6">
+        <SectionHead title="Trusted experience" />
+        <SectionSub>
+          <p class="mb-10">I've partnered with UN-affiliated organizations, SaaS teams, and growing businesses to improve structure, accessibility, and front-end execution.</p>
+          <LinkButton slug="/work" slot="LinkButton">View Selected Work</LinkButton>
+        </SectionSub>
+      </div>
+    </div>
+  </Section></Page
+>

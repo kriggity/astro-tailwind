@@ -4,32 +4,106 @@ import Section from "@components/Section.astro";
 import SectionHead from "@components/SectionHead.astro";
 import Organizations from "@components/Organizations.astro";
 import HighlightedWork from "@components/HighlightedWork.astro";
-import thumbsUp from "@images/thumbs up 05b.png";
+import thumbsUp from "@images/thumbs-up.png";
 import Base from "@layouts/Base.astro";
 import Footer from "@components/Footer.astro";
 import Header from "@components/Header.astro";
 import LinkButton from "@components/LinkButton.astro";
-const title = "Chris Kraft, Interaction Designer and Accessibility Advocate";
+import SectionSub from "@components/SectionSub.astro";
+const title = "Front-End Developer & Accessibility Advocate";
 ---
 
 <Base title={title}>
+  <slot slot="HeadMeta">
+    <title>Front-End Developer & Accessibility Advocate | Chris Kraft</title>
+    <meta
+      name="description"
+      content="Chris Kraft is a front-end developer and accessibility advocate specializing in UX strategy, content structure, and modern web builds with Astro and WordPress."
+    />
+    <meta
+      property="og:title"
+      content="Front-End Developer & Accessibility Advocate | Chris Kraft"
+    />
+    <meta
+      property="og:description"
+      content="UX-focused front-end development with an emphasis on accessibility, content strategy, and maintainable systems. Based in the U.S., working globally."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Front-End Developer & Accessibility Advocate | Chris Kraft"
+    />
+    <meta
+      name="twitter:description"
+      content="Building accessible, strategy-driven websites with Astro, WordPress, and modern front-end tools."
+    />
+  </slot>
   <Header />
-  <main class="flex flex-col flex-nowrap gap-16 lg:gap-32 pb-16 lg:pb-32" id="main">
+  <main
+    class="flex flex-col flex-nowrap gap-16 lg:gap-32 pb-16 lg:pb-32"
+    id="main"
+  >
     <section class="flex flex-col items-center px-4 py-16">
       <div class="flex flex-col sm:flex-row max-w-6xl gap-4 sm:gap-8 lg:gap-0">
-        <div class="flex flex-col gap-8 w-full max-w-lg h-fit self-center">
-          <h1 class="sr-only">The personal website of Chris Kraft, interaction designer and accessibility advocate.</h1>
-          <div class="greeting-text text-indigo-900 font-serif font-extralight leading-[100%]">Hi, I'm <span class="font-normal">Chris</span></div>
-          <div class="text-indigo-900 text-xl font-light leading-[150%]">I've been designing and building in the digital, internet, and print realms for over 26 years.</div>
-          <LinkButton slug="/about" slot="LinkButton">Learn More About Me</LinkButton>
+        <div class="flex flex-col gap-8 w-full max-w-lg h-fit self-center z-10">
+          <h1 class="sr-only">
+            Accessibility Advocate • UX Engineer • Front-End Web Developer
+          </h1>
+          <p class="sr-only">
+            I translate UX strategy, content structure, and accessibility
+            requirements into durable, maintainable front-end systems.
+          </p>
+          <div
+            class="greeting-text text-indigo-900 font-serif font-extralight leading-[100%]"
+          >
+            Hi, I'm <span class="font-normal">Chris</span>
+          </div>
+          <div class="text-indigo-900 text-2xl font-medium">
+            Strategy. Execution. Built for the real world.
+          </div>
+          <div class="text-indigo-900 text-xl font-light">
+            UX engineering and front-end development for accessible,
+            content-driven web platforms.
+          </div>
+          <LinkButton slug="/about" slot="LinkButton"
+            >Learn More About Me</LinkButton
+          >
         </div>
-        <div class="ml-0 sm:-ml-16 lg:-ml-40">
-          <Image src={thumbsUp} alt="Krig Thumbs Up" class="w-full max-w-2xl" />
+        <div class="ml-0 sm:-ml-16 lg:-ml-40 z-0">
+          <Image
+            src={thumbsUp}
+            alt="Blue-toned, stylized illustration of a person smiling and giving a thumbs-up"
+            class="w-full max-w-2xl"
+          />
         </div>
       </div>
     </section>
     <Section>
-      <SectionHead title="Highlighted Projects" />
+      <SectionHead title="A Little About Me" />
+      <SectionSub>
+        <p>
+          I work with teams facing complex, content-heavy web platforms—where
+          structure is unclear, accessibility has become a liability, or
+          delivery breaks down between strategy and execution.
+        </p>
+        <p class="mb-8">
+          My role is to bring clarity to that space: defining experience
+          architecture, aligning content and technical direction, and then
+          building production-ready systems that scale. The result is platforms
+          that are usable, accessible, and maintainable—not just at launch, but
+          over time.
+        </p>
+        <p>Here's what that looks like in practice.</p>
+      </SectionSub>
+    </Section>
+    <Section>
+      <SectionHead title="Selected Work" />
+      <SectionSub>
+        <h3 class="text-pretty">
+          Projects where I helped define structure, improve usability, and build
+          scalable, accessible web platforms.
+        </h3>
+      </SectionSub>
       <HighlightedWork />
     </Section>
     <Section>

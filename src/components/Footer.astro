@@ -1,10 +1,18 @@
-<footer class="mt-auto bg-indigo-900 text-white">
-  <div class="container mx-auto px-4 flex flex-row justify-center align-middle gap-8">
-    <div class="my-auto">&copy; 1998-<span id="currentYear"></span></div>
-    <div><a href="/privacy-policy" class="py-3 px-6 inline-block hover:underline hover:transition-all hover:ease-in-out">Privacy Policy</a></div>
+<footer class="mt-auto bg-indigo-900 text-white flex flex-col">
+  <div class="container mx-auto px-4 flex flex-col items-center">
+    <p class="text-sm text-indigo-100 text-center py-3 px-6">Chris Kraft — Front-end developer & UX-focused problem solver</p>
+    <address class="not-italic flex flex-col sm:flex-row gap-1 justify-center items-center">
+      <a href="mailto:chris.kraft@kriggity.com" class="py-3 px-6 inline-block hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"> chris.kraft@kriggity.com </a>
+      <a href="https://www.linkedin.com/in/kriggity/" target="_blank" rel="noopener" class="py-3 px-6 inline-block hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"> LinkedIn profile </a>
+    </address>
+  </div>
+  <div class="container mx-auto px-4 flex flex-row justify-center items-center gap-8 text-sm">
+    <div>&copy; 1999-<span id="currentYear"></span></div>
+    <div>
+      <a href="/privacy-policy" class="py-3 px-6 inline-block hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"> Privacy Policy </a>
+    </div>
   </div>
 </footer>
-
 <script>
   let date = new Date().getFullYear();
   document.getElementById("currentYear").textContent = date;

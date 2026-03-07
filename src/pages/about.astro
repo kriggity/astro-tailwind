@@ -3,107 +3,102 @@ import Page from "@layouts/Page.astro";
 import Section from "@components/Section.astro";
 import SectionHead from "@components/SectionHead.astro";
 import SectionSub from "@components/SectionSub.astro";
-import SectionSub2Col from "@components/SectionSub2Col.astro";
 import Organizations from "@components/Organizations.astro";
 const title = "About Me";
-const subtitle = "I’m Chris Kraft, a multidisciplinary designer and web developer based in Cincinnati.";
+const subtitle = "Strategy, accessibility, and hands-on execution for content-driven web platforms.";
 ---
 
 <Page title={title} subtitle={subtitle}>
+  <slot slot="HeadMeta">
+    <title>About Chris Kraft | Accessibility-Focused Front-End Developer & UX Engineer</title>
+    <meta name="description" content="Learn more about Chris Kraft — an accessibility-focused front-end developer and UX engineer with 25+ years of experience designing and building usable, inclusive web platforms." />
+    <meta name="keywords" content="Chris Kraft, front-end developer, UX engineer, accessibility advocate, web accessibility, UX strategy, inclusive design, Astro, WordPress, WCAG" />
+    <meta property="og:title" content="About Chris Kraft" />
+    <meta property="og:description" content="Accessibility-focused front-end developer and UX engineer with 25+ years of experience building inclusive, usable web platforms." />
+    <meta property="og:type" content="profile" />
+    <meta property="og:url" content="https://kriggity.com/about/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="About Chris Kraft" />
+    <meta name="twitter:description" content="Accessibility-focused front-end developer and UX engineer with 25+ years of experience building inclusive web platforms." />
+  </slot>
   <Section>
     <SectionHead title="My Background" />
     <SectionSub>
       <div class="text-pretty">
-        <p>With 27<abbr title="Plus">+</abbr> years of experience in the design and internet realms, I treat every project as a unique problem solving opportunity.</p>
-        <p>I graduated in 2002 with a Digital Design degree from the <a href="https://uc.edu" target="_blank">University of Cincinnati's</a> <a href="https://daap.uc.edu/" target="_blank">School of <abbr title="Design, Architecture, Art, and Planning">D.A.A.P</abbr></a>. Since then I have been honing my skills in front-end web design, print, web accessibility, and marketing.</p>
-        <p>While I consider these areas of web and design my wheelhouse, I have also worked lightly in hosting, databases, back-end development, and deployment pipelines.</p>
-        <p>When I'm not designing or coding, I like to balance my screen time with cooking, DIY projects, and reading.</p>
-        <p>Whether it be in work or everyday life, I believe in honesty, working to the best of my ability, asking for help when I need it, and not being afraid to fail.</p>
+        <p>I'm a <strong><abbr title="user experience">UX</abbr> Engineer and Senior Front-End Developer</strong> with 26+ years of experience building <strong>accessible, content-driven web platforms</strong>. My work focuses on <strong>experience architecture, front-end engineering, and CMS strategy</strong>, with an emphasis on <strong>usability, performance, and long-term maintainability</strong>.</p>
+        <p>I've partnered with agencies, product teams, and public-sector organizations to define goals, clarify <strong>content structure</strong>, and establish <strong>technical direction</strong> before moving into production. I'm most effective in roles where I can help determine <strong>what to build, why it matters, and then build it</strong>.</p>
+        <p>Much of my work centers on <strong>WordPress platform architecture</strong>, where I design <strong>scalable content models, editorial workflows, and front-end systems</strong> that support real-world publishing needs. <strong>Accessibility and <abbr title="Web Content Accessibility Guidelines">WCAG</abbr>-aligned practices</strong> are embedded into my approach from the start, ensuring platforms work well for both users and the teams that maintain them.</p>
+        <p>While I'm comfortable contributing across the full project lifecycle, my strengths sit at the intersection of <strong><abbr title="user experience">UX</abbr> strategy, content architecture, and front-end development</strong>—collaborating with designers, engineers, and stakeholders to deliver <strong>production-ready, sustainable web solutions</strong>.</p>
       </div>
     </SectionSub>
   </Section>
   <Section>
-    <SectionHead title="My Approach" />
+    <SectionHead title="How I Work" />
     <SectionSub>
-      <div class="flex flex-col gap-10 md:gap-16">
-        <SectionSub2Col>
-          <h3 slot="title">Ask Questions</h3>
-          <p>I ask a lot of up-front questions to determine what problems need to be solved. These answers inform how best to proceed with any project. Gathering as much knowledge up front helps prevent rework later in a project.</p>
-        </SectionSub2Col>
-        <hr class="text-indigo-300" />
-        <SectionSub2Col>
-          <h3 slot="title">Plan the Best Approach</h3>
-          <p>&quot;Content precedes design. Design in the absence of content is not design, it's decoration.&quot;<br /> ―Jeffrey Zeldman</p>
-          <p>Content-first design enables me to:</p>
-          <ul class="formatted">
-            <li>Design layouts that scale as the site content grows</li>
-            <li>Build reusable components</li>
-            <li>Prevent redesigning flows and screens later in the project timeline</li>
-          </ul>
-        </SectionSub2Col>
-        <hr class="text-indigo-300" />
-        <SectionSub2Col>
-          <h3 slot="title">Build for Usability & Accessibility</h3>
-          <ul class="formatted">
-            <li>Create a site that is responsive across all devices and optimized for search engines</li>
-            <li>Tailor <abbr title="Content Management System">CMS</abbr> admins to suit the needs of the client</li>
-            <li>Employ best <abbr title="User Experience">UX</abbr> and accessibility practices to be inclusive of all visitors</li>
-          </ul>
-        </SectionSub2Col>
+      <div class="text-pretty">
+        <p>My work starts with understanding the problem space—business goals, user needs, content constraints, and technical realities. From there, I define <strong>experience architecture</strong>, including content structure, user flows, accessibility requirements, and technical direction.</p>
+        <p>Once direction is set, I move quickly into <strong>hands-on implementation</strong>. I build <strong>production-ready front ends and CMS platforms</strong> with a focus on <strong>accessibility, performance, and maintainability</strong>.</p>
+        <p>I work comfortably across strategy and execution, either independently or embedded within cross-functional teams. I prioritize clear decisions, steady progress, and systems that continue to hold up long after launch.</p>
       </div>
     </SectionSub>
   </Section>
   <Section>
-    <SectionHead title="My Skills" />
+    <SectionHead title="What I Focus On" />
     <SectionSub>
-      <div class="flex flex-col gap-10 md:gap-16">
-        <div class="flex flex-col md:flex-row md:gap-4">
-          <div class="w-full max-w-3xs">
-            <h3>Strengths</h3>
-          </div>
-          <div class="w-full">
-            <ul class="formatted">
-              <li>Website Construction</li>
-              <li>Website Optimization</li>
-              <li>Content Strategy</li>
-              <li>User Experience Design</li>
-            </ul>
-          </div>
+      <div class="text-pretty flex flex-col gap-8">
+        <div>
+          <h3>UX Strategy & Experience Architecture</h3>
+          <p class="mt-0">Defining structure, flows, and interaction patterns that support real user and business needs.</p>
         </div>
-        <hr class="text-indigo-300" />
-        <div class="flex flex-col md:flex-row md:gap-4">
-          <div class="w-full max-w-3xs">
-            <h3>Tools</h3>
-          </div>
-          <div class="w-full">
-            <ul class="formatted">
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>Word Press</li>
-              <li>Adobe Creative Suite</li>
-              <li>Affinity Design Software</li>
-              <li>Figma</li>
-              <li>Javascript</li>
-            </ul>
-          </div>
+        <div>
+          <h3>Front-End Engineering</h3>
+          <p class="mt-0">Building accessible, scalable front ends using modern HTML, CSS, and JavaScript practices.</p>
         </div>
-        <hr class="text-indigo-300" />
-        <div class="flex flex-col md:flex-row md:gap-4">
-          <div class="w-full max-w-3xs">
-            <h3>Roles</h3>
-          </div>
-          <div class="w-full">
-            <ul class="formatted">
-              <li>Interaction Designer</li>
-              <li>Content Strategist</li>
-              <li>User Experience Designer</li>
-              <li>Front-End Web Developer</li>
-              <li>Graphic Designer</li>
-              <li>Accessibility Advocate</li>
-              <li>Brand Developer</li>
-            </ul>
-          </div>
+        <div>
+          <h3>WordPress Platform Architecture</h3>
+          <p class="mt-0">Designing content models, templates, and editorial workflows that scale and reduce friction.</p>
         </div>
+        <div>
+          <h3>Accessibility</h3>
+          <p class="mt-0">Embedding <abbr title="Web Content Accessibility Guidelines">WCAG</abbr>-aligned practices into structure and implementation—not treating accessibility as an afterthought.</p>
+        </div>
+        <div>
+          <h3>Long-Term Sustainability</h3>
+          <p class="mt-0">Creating systems that are understandable, maintainable, and built to evolve over time.</p>
+        </div>
+      </div>
+    </SectionSub>
+  </Section>
+  <Section>
+    <SectionHead title="Who I Work With" />
+    <SectionSub>
+      <div class="text-pretty">
+        <p>I've worked with agencies, product teams, nonprofits, and public-sector organizations—often on <strong>content-heavy platforms</strong> where clarity, accessibility, and governance matter as much as visual presentation.</p>
+        <p>I partner closely with designers, developers, content strategists, and stakeholders to align goals and translate them into <strong>durable technical solutions</strong>. I'm particularly effective in environments that value collaboration, ownership, and practical problem-solving over performative process.</p>
+      </div>
+    </SectionSub>
+  </Section>
+  <Section>
+    <SectionHead title="What You Can Expect" />
+    <SectionSub>
+      <div class="text-pretty">
+        <p class="mb-[1lh]">When you work with me, you can expect:</p>
+        <ul class="formatted mb-8">
+          <li>Clear thinking and honest communication</li>
+          <li>A focus on structure and systems, not surface-level polish</li>
+          <li>Accessibility and usability built in from the start</li>
+          <li>Thoughtful technical decisions grounded in real constraints</li>
+          <li>Solutions designed to last—not just launch</li>
+        </ul>
+        <p>I bring a steady, pragmatic approach to complex problems, with an emphasis on doing the right work in the right order.</p>
+      </div>
+    </SectionSub>
+  </Section>
+  <Section>
+    <SectionHead title="Let's Talk About What You're Building" />
+    <SectionSub>
+      <div class="text-pretty">
+        <p>If you're looking for someone who can help define what to build, translate that direction into working systems, and see it through to production, <a href="mailto:chris.kraft@kriggity.com" target="_blank">I'm always open to a conversation</a>.</p>
       </div>
     </SectionSub>
   </Section>

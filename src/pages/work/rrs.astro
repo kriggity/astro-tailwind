@@ -1,0 +1,185 @@
+---
+import Page from "@layouts/Page.astro";
+import Section from "@components/Section.astro";
+import SectionHead from "@components/SectionHead.astro";
+import SectionSub from "@components/SectionSub.astro";
+import SectionSub2Col from "@components/SectionSub2Col.astro";
+import Details from "@components/Details.astro";
+import { Image } from "astro:assets";
+import BrandGuidelines from "@images/work/rrs/BrandGuidelines.png";
+import BrandGuidelinesPDF from "@assets/Brand Guidelines.pdf";
+import Development from "@images/work/rrs/Development.jpg";
+import Documentation from "@images/work/rrs/Documentation.jpg";
+import HomeDesigns from "@images/work/rrs/HomeDesigns.jpg";
+import Logos from "@images/work/rrs/Logos.png";
+import Photography from "@images/work/rrs/Photography.png";
+import Print2024 from "@images/work/rrs/Print2024.png";
+import Prototype from "@images/work/rrs/Prototype.png";
+import SiteOutline from "@images/work/rrs/SiteOutline.png";
+import Template from "@images/work/rrs/Template.png";
+import Workshop from "@images/work/rrs/RRS Workshop.jpg";
+import HomeOld from "@images/work/rrs/home-old.jpg";
+import HomeNew from "@images/work/rrs/home-new.jpg";
+import Calendar2023_01 from "@images/work/rrs/Calendar2023-01.jpg";
+import Calendar2023_02 from "@images/work/rrs/Calendar2023-02.jpg";
+import Calendar2023_03 from "@images/work/rrs/Calendar2023-03.png";
+import Calendar2024_01 from "@images/work/rrs/Calendar2024-01.jpg";
+import Calendar2024_02 from "@images/work/rrs/Calendar2024-02.jpg";
+import Calendar2024_03 from "@images/work/rrs/Calendar2024-03.jpg";
+
+const title = "Redi-Rock Structures of O.K.I.";
+const subtitle = "Rebuilding a Brand and Platform to Better Support Sales and Growth";
+---
+
+<Page title={title} subtitle={subtitle}>
+  <slot slot="HeadMeta">
+    <title>Redi-Rock Structures of OKI | Accessibility-Focused UX & Front-End Case Study</title>
+    <meta name="description" content="Redi-Rock Structures of OKI case study by Chris Kraft, highlighting accessibility-focused UX strategy, content structure, and front-end implementation for a real-world platform." />
+    <meta name="keywords" content="Chris Kraft, Redi-Rock Structures of OKI, case study, accessibility, UX strategy, front-end development, inclusive design, WordPress, Astro" />
+    <meta property="og:title" content="Redi-Rock Structures of OKI Case Study" />
+    <meta property="og:description" content="An accessibility-focused UX and front-end case study by Chris Kraft, centered on usability, content clarity, and real-world constraints." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://kriggity.com/work/[project-slug]/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Redi-Rock Structures of OKI Case Study" />
+    <meta name="twitter:description" content="Accessibility-focused UX strategy and front-end implementation case study." />
+  </slot>
+  <Section>
+    <SectionHead title="Summary" />
+    <div class="max-w-2xl mx-auto typography flex flex-col gap-4">
+      <p class="text-pretty">Redi-Rock Structures of O.K.I. needed a comprehensive refresh of its brand and website to better support sales, clarify complex product offerings, and present a more modern, professional presence.</p>
+      <p class="text-pretty">
+        Working in partnership with <a href="https://gretchensteward.crevado.com/" target="_blank">Gretchen Steward of intellifi UX</a>, I helped lead a structured effort spanning brand definition, content organization, and systemized WordPress implementation—ensuring the final result was not only visually updated, but scalable and maintainable.
+      </p>
+      <dl class="flex gap-2">
+        <dt class="text-indigo-900">Website:</dt>
+        <dd>
+          <a href="https://redi-rockstructures.com" target="_blank"> redi-rockstructures.com </a>
+        </dd>
+      </dl>
+    </div>
+  </Section>
+  <Section>
+    <SectionHead title="Role & Scope" />
+    <SectionSub>
+      <Details>
+        <h3 slot="summaryTitle" class="mb-0">My Role</h3>
+        <p>Co-led strategy and execution across branding, content structure, and front-end implementation. I focused on translating brand and UX decisions into a scalable WordPress system that supported sales, marketing, and ongoing content updates.</p>
+      </Details>
+      <Details>
+        <h3 slot="summaryTitle" class="mb-0">Primary Goals</h3>
+        <ul class="list-disc pl-6">
+          <li>Clarify product offerings and use cases</li>
+          <li>Support sales with consistent, reusable content</li>
+          <li>Create a maintainable system for long-term growth</li>
+        </ul>
+      </Details>
+    </SectionSub>
+  </Section>
+  <Section>
+    <SectionHead title="Approach" />
+    <SectionSub>
+      <Details>
+        <h3 slot="summaryTitle" class="mb-0">Brand Definition</h3>
+        <div class="flex flex-col gap-6">
+          <p>We facilitated a brand workshop with company leadership to align on positioning, voice, and target audiences. Outputs from this session guided visual design, copy tone, and content structure across all channels.</p>
+          <Image src={Workshop} alt="Workshop notes and brainstorming boards documenting brand voice, positioning, and strategy discussions" />
+        </div>
+      </Details>
+      <Details>
+        <h3 slot="summaryTitle" class="mb-0">Brand System & Assets</h3>
+        <div class="flex flex-col gap-10">
+          <SectionSub2Col>
+            <h4 slot="title">Identity & Guidelines</h4>
+            <div class="flex flex-col gap-4">
+              <p>
+                Using the workshop findings, I explored logo refinements, color palettes, and typography before authoring comprehensive <a href={BrandGuidelinesPDF} target="_blank">brand guidelines</a> to codify usage across digital and print.
+              </p>
+              <Image src={Logos} alt="Redi-Rock Structures of OKI logo variations displayed across different color backgrounds and formats" />
+              <Image src={BrandGuidelines} alt="Redi-Rock Structures of OKI brand guidelines showing logo usage, typography, color palette, and photography standards" />
+            </div>
+          </SectionSub2Col>
+          <SectionSub2Col>
+            <h4 slot="title">Print & Photography</h4>
+            <div class="flex flex-col gap-4">
+              <p>I updated key print collateral and helped direct a photography session to ensure visual consistency across marketing, sales, and web touchpoints.</p>
+              <Image src={Print2024} alt="Redi-Rock Structures of OKI printed materials including letterhead and business card design for 2024" />
+              <Image src={Photography} alt="Photography examples showing Redi-Rock manufacturing, installation processes, and team members at work" />
+            </div>
+          </SectionSub2Col>
+        </div>
+      </Details>
+      <Details>
+        <h3 slot="summaryTitle" class="mb-0">Content & Information Architecture</h3>
+        <div class="flex flex-col gap-10">
+          <SectionSub2Col>
+            <h4 slot="title">Site Structure</h4>
+            <p>Content was reorganized to highlight products, applications, and real-world projects—drawing inspiration from the broader Redi-Rock ecosystem while tailoring structure to regional needs.</p>
+            <Image src={SiteOutline} alt="Website sitemap and content outline detailing navigation structure, page hierarchy, and resource organization" />
+          </SectionSub2Col>
+          <SectionSub2Col>
+            <h4 slot="title">Page Templates</h4>
+            <p>Page templates were designed to surface critical information quickly, with supporting content cross-linked to encourage exploration without overwhelming users.</p>
+            <Image src={Template} alt="Wireframe-style layout for a Redi-Rock Structures Gravity Walls product page showing page hierarchy, feature sections, block listings, textures, resources, case studies, and footer content structure" />
+          </SectionSub2Col>
+        </div>
+      </Details>
+      <Details>
+        <h3 slot="summaryTitle" class="mb-0">Prototyping & Design Alignment</h3>
+        <p>Interactive prototypes in Figma allowed stakeholders to validate navigation and structure early, reducing risk before visual design and development.</p>
+        <Image src={Prototype} alt="Low-fidelity website wireframes outlining page structure and content hierarchy for Redi-Rock Structures site" />
+        <Image src={HomeDesigns} alt="Series of homepage design explorations showing layout, color, and component variations for Redi-Rock Structures website" />
+      </Details>
+      <Details>
+        <h3 slot="summaryTitle" class="mb-0">Development & Systems</h3>
+        <div class="flex flex-col gap-4">
+          <p>Using WordPress with Oxygen Builder, I created a system of global styles, templates, and reusable components that mirrored the design system and supported rapid content creation.</p>
+          <p>Custom admin tools allowed non-technical users to manage team members, timelines, products, and project case studies through structured metadata rather than manual layout work.</p>
+          <Image src={Development} alt="Website development view showing Redi-Rock homepage layout being edited within a WordPress page builder interface" />
+        </div>
+      </Details>
+      <Details>
+        <h3 slot="summaryTitle" class="mb-0">Documentation & Enablement</h3>
+        <p>I embedded technical documentation directly within the WordPress admin, ensuring guidance lived alongside the tools themselves and reduced reliance on external docs.</p>
+        <Image src={Documentation} alt="Internal documentation page explaining how to edit page headlines and body content in the WordPress admin" />
+      </Details>
+    </SectionSub>
+  </Section>
+  <Section>
+    <SectionHead title="Results" />
+    <SectionSub>
+      <div class="flex flex-col gap-16">
+        <div>
+          <h3>Website Refresh</h3>
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <h4>Before</h4>
+              <Image src={HomeOld} alt="Redi-Rock Structures homepage featuring retaining wall products, light pole bases, EV blocks, testimonials, and project imagery" />
+            </div>
+            <div>
+              <h4>After</h4>
+              <Image src={HomeNew} alt="Responsive Redi-Rock Structures website highlighting retaining wall solutions, industries served, case studies, and technical resources" class="outline outline-indigo-100" />
+            </div>
+          </div>
+        </div>
+        <div>
+          <h3>Print Calendar</h3>
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <h4>Before</h4>
+              <Image src={Calendar2023_01} alt="Bridge with stone retaining walls spanning a shallow creek, featured on a 2023 Redi-Rock Structures of OKI calendar cover" />
+              <Image src={Calendar2023_02} alt="SStone retaining wall bridge abutment along a wooded creek with shallow flowing water" />
+              <Image src={Calendar2023_03} alt="Long stone retaining wall supporting roadway embankment at Beechwood Road and Gaynor Road Bridge in Clermont County, Ohio" />
+            </div>
+            <div>
+              <h4>After</h4>
+              <Image src={Calendar2024_01} alt="Stone retaining wall bridge abutment with creek and wooded surroundings, featured on a 2024 Redi-Rock Structures of OKI calendar cover" />
+              <Image src={Calendar2024_02} alt="Tiered stone retaining wall along a wooded hillside at Wolper Pleasant Hill Road in Clermont County, Ohio" />
+              <Image src={Calendar2024_03} alt="December 2023 calendar page branded for Redi-Rock Structures of OKI" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </SectionSub>
+  </Section>
+</Page>

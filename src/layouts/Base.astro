@@ -3,7 +3,7 @@ import "@fontsource-variable/roboto-slab";
 import "@fontsource/poppins";
 import "../styles/global.css";
 
-const { title = "Chris Kraft, Interaction Designer and Accessibility Advocate" } = Astro.props;
+const { title = "Front-End Developer & Accessibility Advocate | Chris Kraft" } = Astro.props;
 ---
 
 <!doctype html>
@@ -12,8 +12,24 @@ const { title = "Chris Kraft, Interaction Designer and Accessibility Advocate" }
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/svg+xml" href="/favicon.png" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://kriggity.com/" />
+
+    <!-- Open Graph (Social Sharing) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://kriggity.com/" />
+    <meta property="og:site_name" content="kriggity" />
+    <meta property="og:image" content="https://kriggity.com/og-image.jpg" />
+
+    <!-- Twitter -->
+
+    <meta name="twitter:image" content="https://kriggity.com/og-image.jpg" />
+    <!-- Robots -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- Passed Meta -->
+    <slot name="HeadMeta" />
   </head>
   <body class="flex flex-col">
     <a href="#main" class="sr-only" tabindex="0">Skip to Content</a>

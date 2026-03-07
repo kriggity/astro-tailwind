@@ -9,16 +9,18 @@ import Close from "@images/close.svg";
     <nav class="w-fit">
       <!-- Hamburger -->
       <button class="md:hidden absolute top-0 right-0 hover:cursor-pointer w-12 h-14 p-2 z-10 btn-hamburger nav-btn">
+        <span class="sr-only">Open Menu</span>
         <HamburgerRight fill="#ffffff" width={32} height={32} />
       </button>
       <!-- Close -->
       <button class="md:hidden absolute top-0 right-0 hover:cursor-pointer w-12 h-14 p-2 z-20 btn-close nav-btn" tabindex="0">
+        <span class="sr-only">Close Menu</span>
         <Close stroke="#ffffff" width={32} height={32} />
       </button>
       <div class="hidden absolute z-40 top-14 right-0 left-0 md:inline md:relative md:top-[unset] md:right-[unset] md:left-[unset] md:z-[unset] bg-indigo-900 nav-container">
         <ul class="flex flex-col md:flex-row gap">
           <li><a tabindex="0" class="outline-0" href="/about">About</a></li>
-          <li><a tabindex="0" class="outline-0" href="/projects">Projects</a></li>
+          <li><a tabindex="0" class="outline-0" href="/work">Work</a></li>
           <li><a tabindex="0" class="outline-0" href="/other-work">Other Work</a></li>
           <li><a tabindex="0" class="outline-0" href="/contact">Contact</a></li>
         </ul>

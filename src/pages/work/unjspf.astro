@@ -1,0 +1,101 @@
+---
+import Page from "@layouts/Page.astro";
+import Section from "@components/Section.astro";
+import SectionHead from "@components/SectionHead.astro";
+import SectionSub from "@components/SectionSub.astro";
+import Details from "@components/Details.astro";
+import Image from "astro/components/Image.astro";
+import UNJSPF01 from "@images/work/unjspf/UNJSPF01.jpg";
+import UNJSPF02 from "@images/work/unjspf/UNJSPF02.jpg";
+import UNJSPF03 from "@images/work/unjspf/UNJSPF03.jpg";
+const title = "United Nations Joint Staff Pension Fund";
+const subtitle = "Modernizing a Mission-Critical Platform for a Global Audience";
+---
+
+<Page title={title} subtitle={subtitle}>
+  <slot slot="HeadMeta">
+    <title>United Nations Joint Staff Pension website | Accessibility-Focused UX & Front-End Case Study</title>
+    <meta name="description" content="United Nations Joint Staff Pension website case study by Chris Kraft, highlighting accessibility-focused UX strategy, content structure, and front-end implementation for a real-world platform." />
+    <meta name="keywords" content="Chris Kraft, United Nations Joint Staff Pension website, case study, accessibility, UX strategy, front-end development, inclusive design, WordPress, Astro" />
+    <meta property="og:title" content="United Nations Joint Staff Pension website Case Study" />
+    <meta property="og:description" content="An accessibility-focused UX and front-end case study by Chris Kraft, centered on usability, content clarity, and real-world constraints." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://kriggity.com/work/[project-slug]/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="United Nations Joint Staff Pension website Case Study" />
+    <meta name="twitter:description" content="Accessibility-focused UX strategy and front-end implementation case study." />
+  </slot>
+  <Section>
+    <SectionHead title="Summary" />
+    <div class="max-w-2xl mx-auto typography gap-4 flex flex-col flex-nowrap">
+      <p>The United Nations Joint Staff Pension Fund (UNJSPF) supports current and retired United Nations employees around the world. Its website plays a critical role in communicating complex pension information to a diverse, global audience—many of whom rely on clarity, accessibility, and trust when navigating retirement-related content.</p>
+      <p>I partnered with UNJSPF leadership, internal development teams, and UI/UX specialists to modernize an aging website. While the specialists led user research, content strategy, and interface design, my role focused on front-end implementation, accessibility, and translating that work into a scalable, maintainable WordPress system.</p>
+      <dl class="flex flex-row flex-nowrap gap-2">
+        <dt class="text-indigo-900">Website:</dt>
+        <dd><a href="https://unjspf.org/" target="_blank">unjspf.org</a></dd>
+      </dl>
+    </div>
+  </Section>
+  <Section>
+    <SectionHead title="Project Snapshot" />
+    <SectionSub>
+      <div class="text-pretty flex flex-col gap-8">
+        <div>
+          <h3 slot="title">Role</h3>
+          <p>Human Factors Software Engineer / Front-End Implementation Lead</p>
+        </div>
+        <div>
+          <h3 slot="title">Collaboration</h3>
+          <p>UI/UX specialists, UNJSPF leadership, and internal UN developers</p>
+        </div>
+        <div>
+          <h3 slot="title">Scope</h3>
+          <p>Front-end development, WordPress architecture, accessibility, editorial workflows</p>
+        </div>
+        <div>
+          <h3 slot="title">Audience</h3>
+          <p>Active and retired UN staff across multiple countries, languages, and accessibility needs</p>
+        </div>
+      </div>
+    </SectionSub>
+  </Section>
+  <Section>
+    <SectionHead title="The Challenge" />
+    <SectionSub>
+      <p>Over time, the UNJSPF website had grown organically, resulting in fragmented content, inconsistent navigation, and workflows that made even small updates dependent on developers. For an organization responsible for pension and retirement benefits, these issues introduced usability, accessibility, and trust risks.</p>
+    </SectionSub>
+  </Section>
+  <Section>
+    <SectionHead title="My Role & Approach" />
+    <SectionSub>
+      <Details>
+        <h3 slot="summaryTitle" class="mb-0">Collaboration & Research Support</h3>
+        <p>UI/UX specialists led user interviews, content strategy, and interface redesign. I partnered closely with them during research and testing to ensure insights could be realistically supported by the site's technical architecture and accessibility requirements.</p>
+      </Details>
+      <Details>
+        <h3 slot="summaryTitle" class="mb-0">Technical & Workflow Analysis</h3>
+        <p>I conducted a comprehensive audit of both existing WordPress sites, evaluating templates, plugins, and custom tools. I interviewed UNJSPF content editors to understand publishing workflows and pain points, identifying opportunities to reduce friction and remove dependency on developers for routine updates.</p>
+      </Details>
+      <Details>
+        <h3 slot="summaryTitle" class="mb-0">Implementation Strategy</h3>
+        <p>Based on the approved content strategy and designs, I defined a WordPress architecture that supported clear content hierarchies, reusable templates, and accessibility best practices. The goal was to create a system that could scale without increasing technical debt.</p>
+      </Details>
+    </SectionSub>
+  </Section>
+  <Section>
+    <SectionHead title="Solution & Outcomes" />
+    <SectionSub>
+      <p>Working alongside UI/UX specialists and UN developers, I led the front-end implementation of a new WordPress platform that translated strategy and design into a stable, maintainable system. The final solution improved content clarity, enabled non-technical staff to manage content independently, and established a foundation for future accessibility improvements.</p>
+    </SectionSub>
+  </Section>
+  <Section>
+    <SectionHead title="Results" />
+    <SectionSub>
+      <div class="flex flex-col flex-nowrap sm:grid sm:grid-cols-3 sm:grid-rows-1 gap-8 sm:gap-4">
+        <Image src={UNJSPF01} alt="UNJSPF homepage highlighting pension services, member situations, key figures, and recent news" class="outline outline-indigo-100" />
+        <Image src={UNJSPF02} alt="UNJSPF For Clients page showing pension topics and guidance organized by member situation" class="outline outline-indigo-100" />
+        <Image src={UNJSPF03} alt="UNJSPF client resources page with categorized pension topics and member support options" class="outline outline-indigo-100" />
+      </div>
+    </SectionSub>
+  </Section>
+</Page>

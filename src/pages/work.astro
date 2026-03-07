@@ -1,0 +1,27 @@
+---
+import Page from "@layouts/Page.astro";
+import Section from "@components/Section.astro";
+import SectionHead from "@components/SectionHead.astro";
+import HighlightedWork from "@components/HighlightedWork.astro";
+const title = "Selected Work";
+const subtitle = "Strategy, accessibility, and production-ready web platforms";
+---
+
+<Page title={title} subtitle={subtitle}>
+  <slot slot="HeadMeta">
+    <title>Work | Accessibility-Focused Front-End Development & UX Engineering</title>
+    <meta name="description" content="Selected work by Chris Kraft — an accessibility-focused front-end developer and UX engineer. Case studies highlighting UX strategy, inclusive design, and real-world implementation." />
+    <meta name="keywords" content="Chris Kraft, work, case studies, front-end development, UX engineering, accessibility, inclusive design, web strategy, WordPress, Astro" />
+    <meta property="og:title" content="Work by Chris Kraft" />
+    <meta property="og:description" content="Selected case studies focused on accessibility, UX strategy, and front-end implementation across complex, real-world projects." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://kriggity.com/work/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Work by Chris Kraft" />
+    <meta name="twitter:description" content="Accessibility-focused front-end development and UX engineering case studies." />
+  </slot>
+  <Section>
+    <SectionHead title="Highlighted Work" />
+    <HighlightedWork />
+  </Section>
+</Page>

@@ -20,8 +20,10 @@ const { name = "accordion" } = Astro.props;
 
 <style>
   summary {
+    list-style: none;
     &::marker {
       content: "";
+      display: none;
     }
   }
   details[open] {

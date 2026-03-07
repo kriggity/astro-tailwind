@@ -1,0 +1,126 @@
+---
+import Page from "@layouts/Page.astro";
+import Section from "@components/Section.astro";
+import SectionHead from "@components/SectionHead.astro";
+import SectionSub from "@components/SectionSub.astro";
+import SectionSub2Col from "@components/SectionSub2Col.astro";
+import Details from "@components/Details.astro";
+import Image from "astro/components/Image.astro";
+import Home from "@images/work/dtv/home.jpg";
+import HomeMobile from "@images/work/dtv/home-mobile.jpg";
+import Ownership from "@images/work/dtv/takeownership.jpg";
+import OwnershipMobile from "@images/work/dtv/takeownership-mobile.jpg";
+
+const title = "DeveloperTown Values";
+const subtitle = "Communicating Culture Clearly Without Unnecessary Complexity";
+---
+
+<Page title={title} subtitle={subtitle}>
+  <slot slot="HeadMeta">
+    <title>DeveloperTown Values website | Accessibility-Focused UX & Front-End Case Study</title>
+    <meta name="description" content="DeveloperTown Values website case study by Chris Kraft, highlighting accessibility-focused UX strategy, content structure, and front-end implementation for a real-world platform." />
+    <meta name="keywords" content="Chris Kraft, DeveloperTown Values website, case study, accessibility, UX strategy, front-end development, inclusive design, WordPress, Astro" />
+    <meta property="og:title" content="DeveloperTown Values website Case Study" />
+    <meta property="og:description" content="An accessibility-focused UX and front-end case study by Chris Kraft, centered on usability, content clarity, and real-world constraints." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://kriggity.com/work/[project-slug]/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="DeveloperTown Values website Case Study" />
+    <meta name="twitter:description" content="Accessibility-focused UX strategy and front-end implementation case study." />
+  </slot>
+  <Section>
+    <SectionHead title="Summary" />
+    <div class="max-w-2xl mx-auto typography gap-4 flex flex-col">
+      <p class="text-pretty">
+        <a href="https://developertown.com/" target="_blank">DeveloperTown</a> wanted a focused, intentional way to communicate its values—separate from marketing content and without unnecessary technical or visual complexity.
+      </p>
+      <p class="text-pretty">Working with content developed during a company-wide values workshop and in collaboration with internal stakeholders, I translated those principles into a lightweight, accessible microsite. The emphasis was on clarity, performance, and long-term maintainability rather than visual polish or over-engineering.</p>
+      <dl class="flex flex-row flex-nowrap gap-2">
+        <dt class="text-indigo-900">Website:</dt>
+        <dd>
+          <a href="https://values.developertown.com/" target="_blank"> values.developertown.com </a>
+        </dd>
+      </dl>
+    </div>
+  </Section>
+  <Section>
+    <SectionHead title="Role & Scope" />
+    <SectionSub>
+      <Details>
+        <h3 slot="summaryTitle" class="mb-0">My Role</h3>
+        <p>Front-end implementation and technical decision-making. I partnered with internal stakeholders to structure content, select an appropriate platform, and build a fast, accessible site that supported the message without distraction.</p>
+      </Details>
+      <Details>
+        <h3 slot="summaryTitle" class="mb-0">Primary Goals</h3>
+        <ul class="list-disc pl-6">
+          <li>Clearly communicate company values in a dedicated space</li>
+          <li>Prioritize performance, accessibility, and simplicity</li>
+          <li>Minimize long-term maintenance and technical overhead</li>
+        </ul>
+      </Details>
+    </SectionSub>
+  </Section>
+  <Section>
+    <SectionHead title="Approach" />
+    <SectionSub>
+      <Details>
+        <h3 slot="summaryTitle" class="mb-0">Content-First Structure</h3>
+        <p>I worked with stakeholders to organize the values content into a clear hierarchy, ensuring each section was readable, focused, and supported by consistent page patterns.</p>
+      </Details>
+      <Details>
+        <h3 slot="summaryTitle" class="mb-0">Technical Strategy</h3>
+        <div class="flex flex-col gap-10">
+          <SectionSub2Col>
+            <h4 slot="title">Astro</h4>
+            <p>
+              I built the site using <a href="https://astro.build/" target="_blank">Astro</a> to prioritize performance, simplicity, and long-term maintainability. Static generation allowed the content to remain fast, secure, and easy to evolve without ongoing platform complexity.
+            </p>
+          </SectionSub2Col>
+          <SectionSub2Col>
+            <h4 slot="title">Tailwind CSS</h4>
+            <p>
+              <a href="https://tailwindcss.com/" target="_blank">Tailwind CSS</a> was used to rapidly implement consistent layouts while keeping the final CSS output minimal. Its utility-first approach supported responsive layouts without introducing custom CSS overhead.
+            </p>
+          </SectionSub2Col>
+        </div>
+      </Details>
+      <Details>
+        <h3 slot="summaryTitle" class="mb-0">Accessibility & Usability</h3>
+        <p>Semantic HTML, readable typography, and predictable navigation patterns were prioritized to ensure the content was accessible and easy to consume across devices and assistive technologies.</p>
+      </Details>
+    </SectionSub>
+  </Section>
+  <Section>
+    <SectionHead title="Results" />
+    <SectionSub>
+      <p class="max-w-2xl typography">The final site delivered a clean, purpose-driven experience that allowed DeveloperTown's values to stand on their own—without visual noise or technical bloat.</p>
+      <ul class="list-disc pl-6 max-w-2xl typography">
+        <li>Fast-loading, lightweight static site</li>
+        <li>Clear content structure aligned with company culture</li>
+        <li>Low-maintenance foundation that can evolve over time</li>
+      </ul>
+      <div class="flex flex-col lg:flex-row lg:flex-nowrap gap-8 mt-10">
+        <div class="flex gap-4">
+          <div>
+            <h3>Desktop</h3>
+            <Image src={Home} alt="DeveloperTown core values page showing mission, vision, and team values sections" class="lg:max-h-[860px] w-auto outline outline-indigo-100" />
+          </div>
+          <div>
+            <h3>Mobile</h3>
+            <Image src={HomeMobile} alt="Mobile view of DeveloperTown core values page with mission, vision, and values sections" class="lg:max-h-[860px] w-auto outline outline-indigo-100" />
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div>
+            <h3>Desktop</h3>
+            <Image src={Ownership} alt="DeveloperTown Take Ownership value page highlighting behaviors and project examples" class="lg:max-h-[860px] w-auto outline outline-indigo-100" />
+          </div>
+          <div>
+            <h3>Mobile</h3>
+            <Image src={OwnershipMobile} alt="Mobile view of DeveloperTown Take Ownership value page with behaviors and case studies" class="lg:max-h-[860px] w-auto outline outline-indigo-100" />
+          </div>
+        </div>
+      </div>
+    </SectionSub>
+  </Section>
+</Page>
