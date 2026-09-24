@@ -1,0 +1,5 @@
+# kriggity.com is kept for email only; send its web traffic to the primary domain.
+# (www.kriggity.com is handled by Netlify DNS; these cover the apex, which
+# Netlify otherwise serves as a plain alias without redirecting.)
+https://kriggity.com/*  https://chriskraft.dev/:splat  301!
+http://kriggity.com/*   https://chriskraft.dev/:splat  301!
