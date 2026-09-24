@@ -8,7 +8,7 @@ import aiRobotsTxt from "astro-ai-robots-txt";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://kriggity.com",
+  site: "https://chriskraft.dev",
   devToolbar: {
     enabled: false,
   },
