@@ -4,6 +4,8 @@ import "@fontsource/poppins";
 import "../styles/global.css";
 
 const { title = "Senior Front-End Engineer | Chris Kraft" } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const ogImageURL = new URL("/og-image.jpg", Astro.site);
 ---
 
 <!doctype html>
@@ -11,20 +13,20 @@ const { title = "Senior Front-End Engineer | Chris Kraft" } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://kriggity.com/" />
+    <link rel="canonical" href={canonicalURL} />
 
     <!-- Open Graph (Social Sharing) -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://kriggity.com/" />
-    <meta property="og:site_name" content="kriggity" />
-    <meta property="og:image" content="https://kriggity.com/og-image.jpg" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:site_name" content="Chris Kraft" />
+    <meta property="og:image" content={ogImageURL} />
 
     <!-- Twitter -->
 
-    <meta name="twitter:image" content="https://kriggity.com/og-image.jpg" />
+    <meta name="twitter:image" content={ogImageURL} />
     <!-- Robots -->
     <meta name="robots" content="index, follow" />
 
