@@ -71,10 +71,12 @@ const title = "Senior Front-End Engineer";
           >
         </div>
         <div class="ml-0 sm:-ml-16 lg:-ml-40 z-0">
+          <!-- Fixed sm+ width (the image's natural 608px) so the shrink-to-fit
+               row is sized correctly before the image loads; avoids CLS. -->
           <Image
             src={thumbsUp}
             alt="Blue-toned, stylized illustration of a person smiling and giving a thumbs-up"
-            class="w-full max-w-2xl"
+            class="w-full max-w-2xl sm:w-[38rem] sm:max-w-full"
           />
         </div>
       </div>
